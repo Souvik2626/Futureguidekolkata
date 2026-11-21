@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Guide (Vue.js Edition) | Premier Educational Consultancy Kolkata</title>
+  <meta name="description" content="Future Guide Kolkata - Your Admission Partner for a Brighter Tomorrow. Powered by Vue.js 3. Expert college admission support & scholarship assistance.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#003B73',
+              darkBlue: '#00264D',
+              lightBlue: '#0A66C2',
+              iceBlue: '#EFF6FF',
+              green: '#109B42',
+              darkGreen: '#0B7330',
+              limeGreen: '#22C55E',
+              gold: '#F59E0B'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          },
+          boxShadow: {
+            'card': '0 10px 30px -5px rgba(0, 59, 115, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02)',
+            'card-hover': '0 20px 40px -10px rgba(0, 59, 115, 0.16), 0 8px 12px -3px rgba(16, 155, 66, 0.1)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Vue.js 3 CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #00264D 0%, #003B73 50%, #084C8D 100%); }
+    .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); }
+    [v-cloak] { display: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div id="vue-app" v-cloak class="min-h-screen flex flex-col">
+    
+    <!-- Top Bar -->
+    <div className="bg-gradient-to-r from-brand-darkBlue via-brand-blue to-brand-green text-white text-xs py-2 px-4 shadow-sm">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="bg-emerald-500 text-slate-900 font-bold px-2 py-0.5 rounded text-[11px] uppercase">
+            Vue.js 3 Mode
+          </span>
+          <span>🎓 FUTURE GUIDE — Kolkata's Premier College Admission & Scholarship Consultancy</span>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-semibold">
+          <a :href="'tel:' + contact.phones[0]" class="hover:text-emerald-300">📞 +91 {{ contact.phones[0] }}</a>
+          <span>|</span>
+          <a :href="'https://wa.me/91' + contact.whatsapp" target="_blank" class="hover:text-emerald-300 text-emerald-300">💬 WhatsApp Support</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo -->
+          <div class="flex items-center gap-3 cursor-pointer" @click="activeTab = 'home'">
+            <img src="./assets/logo.jpg" alt="Future Guide" class="w-14 h-14 object-contain rounded-full border-2 border-brand-green/30 shadow-md">
+            <div class="flex flex-col">
+              <span class="text-2xl sm:text-3xl font-extrabold tracking-tight text-brand-blue font-heading leading-none">
+                FUTURE<span class="text-brand-green ml-1">GUIDE</span>
+              </span>
+              <span class="text-[10px] sm:text-xs text-slate-500 font-medium">Your Admission Partner for a Brighter Tomorrow</span>
+              <span class="text-[9px] font-bold text-brand-darkBlue uppercase hidden sm:block">{{ contact.pillars }}</span>
+            </div>
+          </div>
+
+          <!-- Desktop Links -->
+          <nav class="hidden md:flex items-center space-x-1">
+            <button @click="activeTab = 'home'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'home' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue']">Home</button>
+            <button @click="activeTab = 'about'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'about' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue']">About</button>
+            <button @click="activeTab = 'courses'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'courses' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue']">Courses</button>
+            <button @click="activeTab = 'scholarships'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'scholarships' ? 'text-brand-green bg-green-50 font-bold' : 'text-slate-600 hover:text-brand-green']">Scholarships & WBSCC</button>
+            <button @click="activeTab = 'colleges'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'colleges' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue']">Colleges</button>
+            <button @click="activeTab = 'blog'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'blog' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue']">Blog</button>
+            <button @click="activeTab = 'contact'" :class="['px-3 py-2 rounded-lg text-sm font-semibold transition-colors', activeTab === 'contact' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue']">Contact</button>
+          </nav>
+
+          <!-- Toggle back to React / CTA -->
+          <div class="hidden lg:flex items-center gap-3">
+            <a href="index.html" class="text-xs px-2.5 py-1 rounded border border-blue-500/40 text-blue-700 bg-blue-50 hover:bg-blue-100 font-medium transition-colors">
+              React Version ➔
+            </a>
+            <button @click="modalOpen = true" class="px-4 py-2.5 rounded-xl font-bold text-sm text-white shadow bg-gradient-to-r from-brand-blue to-brand-green hover:shadow-lg transition-all">
+              Apply Now
+            </button>
+          </div>
+
+          <!-- Mobile Toggle -->
+          <div class="md:hidden flex items-center gap-2">
+            <button @click="modalOpen = true" class="px-3 py-1.5 rounded-lg font-bold text-xs text-white bg-brand-green shadow-sm">Apply</button>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 text-slate-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div v-if="mobileMenuOpen" class="md:hidden bg-white border-b border-slate-200 p-4 space-y-2">
+        <button @click="activeTab = 'home'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">🏠 Home</button>
+        <button @click="activeTab = 'about'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">ℹ️ About Us</button>
+        <button @click="activeTab = 'courses'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">📚 Courses & Admissions</button>
+        <button @click="activeTab = 'scholarships'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">💳 Scholarships & Credit Card</button>
+        <button @click="activeTab = 'colleges'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">🏛️ Partner Colleges</button>
+        <button @click="activeTab = 'blog'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">📝 Blog Section</button>
+        <button @click="activeTab = 'contact'; mobileMenuOpen = false" class="block w-full text-left py-2 font-semibold">📍 Contact Kolkata</button>
+        <div class="pt-2 border-t flex flex-col gap-2">
+          <a href="index.html" class="text-center py-2 text-xs font-bold text-blue-700 bg-blue-50 rounded">Switch to React Edition ➔</a>
+          <button @click="modalOpen = true; mobileMenuOpen = false" class="py-2 text-center text-white bg-brand-green rounded font-bold">Book Free Counseling</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main class="flex-1">
+      
+      <!-- HERO -->
+      <section v-if="activeTab === 'home'" class="hero-gradient text-white pt-12 pb-20 lg:pt-16 lg:pb-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-emerald-300 text-xs font-semibold">
+                ✨ Kolkata's Verified Educational Admission Partner
+              </span>
+              <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                Your Admission Partner for a <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-300">Brighter Tomorrow</span>
+              </h1>
+              <p class="text-slate-200 text-base sm:text-lg">
+                Complete admission guidance for <strong>Engineering (B.Tech), Medical (MBBS), Nursing (GNM/B.Sc), Management (MBA/BBA), Pharmacy & Law</strong>. 100% verified colleges, genuine fee structure & complete West Bengal Student Credit Card loan processing.
+              </p>
+
+              <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+                <button @click="modalOpen = true" class="px-7 py-3.5 rounded-xl font-bold bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg transition-all">
+                  Book Free Counseling ➔
+                </button>
+                <a :href="'https://wa.me/91' + contact.whatsapp + '?text=' + encodeURIComponent('Hello Future Guide, please share college admission options.')" target="_blank" class="px-6 py-3.5 rounded-xl font-bold bg-white/10 hover:bg-white/20 border border-white/20 text-white">
+                  💬 WhatsApp Counselor
+                </a>
+              </div>
+
+              <!-- Metrics -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15">
+                <div><div class="text-2xl font-bold">5,000+</div><div class="text-xs text-slate-300">Students Guided</div></div>
+                <div><div class="text-2xl font-bold text-emerald-300">150+</div><div class="text-xs text-slate-300">Partner Colleges</div></div>
+                <div><div class="text-2xl font-bold text-brand-gold">₹10 Lakh</div><div class="text-xs text-slate-300">WBSCC Loan Aid</div></div>
+                <div><div class="text-2xl font-bold">10+ Yrs</div><div class="text-xs text-slate-300">Experience</div></div>
+              </div>
+            </div>
+
+            <!-- Hero Form -->
+            <div class="lg:col-span-5 bg-white text-slate-800 p-6 sm:p-8 rounded-3xl shadow-2xl">
+              <div class="flex items-center justify-between mb-4 border-b pb-3">
+                <h3 class="text-xl font-bold text-slate-900">Instant Admission Inquiry</h3>
+                <img src="./assets/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full border">
+              </div>
+
+              <form @submit.prevent="submitForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Student Name *</label>
+                  <input v-model="form.name" required placeholder="Enter student full name" class="w-full px-3 py-2 border rounded-lg text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Phone *</label>
+                    <input v-model="form.phone" required placeholder="Mobile number" class="w-full px-3 py-2 border rounded-lg text-sm">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Target Course</label>
+                    <select v-model="form.course" class="w-full px-2 py-2 border rounded-lg text-sm bg-white">
+                      <option>Engineering (B.Tech)</option>
+                      <option>Medical (MBBS)</option>
+                      <option>Nursing (GNM/B.Sc)</option>
+                      <option>Management (MBA/BBA)</option>
+                      <option>Pharmacy (B.Pharm)</option>
+                      <option>Law (BA LLB)</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">City or Notes</label>
+                  <textarea v-model="form.message" rows="2" placeholder="Marks, college preference or questions..." class="w-full px-3 py-2 border rounded-lg text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 bg-brand-blue hover:bg-brand-darkBlue text-white font-bold rounded-xl text-sm transition-all">
+                  Submit & Open WhatsApp ➔
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Services List -->
+      <section v-if="activeTab === 'home'" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase text-brand-green bg-green-50 px-3 py-1 rounded-full border">Consultancy Capabilities</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Comprehensive Admission Guidance</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100">
+              <div class="text-3xl mb-3">🎓</div>
+              <h3 class="font-bold text-lg text-slate-900 mb-2">College Admission Support</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Direct admission under Management, Merit & NRI quota across 150+ top accredited colleges with zero hidden donations.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100">
+              <div class="text-3xl mb-3">💳</div>
+              <h3 class="font-bold text-lg text-slate-900 mb-2">Scholarship & WBSCC Loan</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Complete documentation & bonafide assistance for up to ₹10 Lakhs West Bengal Student Credit Card loan at 4% simple interest.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-card border border-slate-100">
+              <div class="text-3xl mb-3">🏥</div>
+              <h3 class="font-bold text-lg text-slate-900 mb-2">Nursing & Hospital Clinical Ties</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">Assured admission in INC & WBNC recognized GNM & B.Sc Nursing colleges with 100% bedside clinical hospital training.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COURSES SECTION -->
+      <section v-if="activeTab === 'courses' || activeTab === 'home'" class="py-16 bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h2 class="text-3xl font-extrabold text-slate-900">Featured Course Admissions</h2>
+            <p class="text-slate-600 text-sm mt-1">Explore popular degree pathways in Kolkata, India & Abroad.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div v-for="c in courses" :key="c.id" class="bg-slate-50 p-6 rounded-2xl border flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-brand-darkBlue bg-blue-100 px-2 py-0.5 rounded">{{ c.category }}</span>
+                <h3 class="font-bold text-lg text-slate-900 mt-2 mb-1">{{ c.title }}</h3>
+                <p class="text-xs text-slate-600 mb-3">{{ c.desc }}</p>
+                <div class="text-xs text-slate-500 bg-white p-2.5 rounded-lg border mb-4">
+                  <div><strong>Duration:</strong> {{ c.duration }}</div>
+                  <div><strong>Eligibility:</strong> {{ c.eligibility }}</div>
+                </div>
+              </div>
+              <button @click="openInquiryFor(c.title)" class="w-full py-2 bg-brand-blue text-white rounded-lg text-xs font-bold hover:bg-brand-darkBlue transition-colors">
+                Inquire for {{ c.category }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCHOLARSHIPS & WBSCC -->
+      <section v-if="activeTab === 'scholarships'" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="text-xs font-bold text-brand-green bg-green-50 px-3 py-1 rounded-full border border-green-200">Financial Assistance</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-2">West Bengal Student Credit Card & Grants</h2>
+          </div>
+
+          <div class="bg-gradient-to-r from-brand-darkBlue to-brand-blue text-white p-8 rounded-3xl shadow-xl">
+            <h3 class="text-2xl font-bold mb-2">West Bengal Student Credit Card Scheme (WBSCC)</h3>
+            <p class="text-sm text-slate-200 mb-4">Get up to ₹10,00,000 educational loan sanctioned at only 4% simple interest with a 15-year repayment window.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+              <div class="bg-white/10 p-3 rounded-xl font-bold">₹10 Lakh Limit</div>
+              <div class="bg-white/10 p-3 rounded-xl font-bold">4% Simple Interest</div>
+              <div class="bg-white/10 p-3 rounded-xl font-bold">15 Yrs Repayment</div>
+              <div class="bg-white/10 p-3 rounded-xl font-bold">1 Yr Moratorium</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-2xl border shadow-sm">
+              <h4 class="font-bold text-lg text-slate-900 mb-1">Swami Vivekananda Scholarship (SVMCM)</h4>
+              <p class="text-xs text-brand-green font-bold mb-2">₹12,000 to ₹60,000 per year grant</p>
+              <p class="text-xs text-slate-600">Direct Bikash Bhavan benefit for students scoring 60%+ in 10th/12th exams with annual family income under ₹2.5 LPA.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border shadow-sm">
+              <h4 class="font-bold text-lg text-slate-900 mb-1">Aikyashree & Oasis Scheme</h4>
+              <p class="text-xs text-brand-green font-bold mb-2">Full tuition grant + hostel allowance</p>
+              <p class="text-xs text-slate-600">Financial assistance for Minority, SC, ST and OBC candidates pursuing higher technical and medical education.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG SECTION -->
+      <section v-if="activeTab === 'blog'" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="text-xs font-bold text-brand-blue bg-blue-50 px-3 py-1 rounded-full">Articles & Alerts</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Future Guide Educational Blog</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div v-for="b in blogs" :key="b.id" class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-bold text-brand-green bg-green-50 px-2 py-0.5 rounded">{{ b.category }}</span>
+                <h3 class="text-xl font-bold text-slate-900 mt-2 mb-2">{{ b.title }}</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">{{ b.summary }}</p>
+              </div>
+              <button @click="openBlog(b)" class="text-xs font-bold text-brand-blue hover:text-brand-green">
+                Read Full Article ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section v-if="activeTab === 'contact'" class="py-16 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div class="text-center max-w-2xl mx-auto">
+            <span class="text-xs font-bold text-brand-green bg-green-50 px-3 py-1 rounded-full border">Get in Touch</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Contact FUTURE GUIDE Kolkata</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div class="bg-white p-6 rounded-2xl border shadow-sm space-y-4">
+              <div class="flex items-center gap-3">
+                <img src="./assets/logo.jpg" alt="Logo" class="w-12 h-12 rounded-full border">
+                <div>
+                  <h3 class="font-bold text-lg">FUTURE GUIDE</h3>
+                  <p class="text-xs text-slate-500">Kolkata Admission Support</p>
+                </div>
+              </div>
+              <div class="space-y-3 text-xs sm:text-sm text-slate-700">
+                <p>📍 <strong>Office:</strong> Salt Lake Sector V & Ruby Hospital Crossing Desks, Kolkata</p>
+                <p>📞 <strong>Phone:</strong> <a :href="'tel:' + contact.phones[0]" class="text-brand-blue font-bold">{{ contact.phones[0] }}</a> / <a :href="'tel:' + contact.phones[1]" class="text-brand-blue font-bold">{{ contact.phones[1] }}</a></p>
+                <p>💬 <strong>WhatsApp:</strong> <a :href="'https://wa.me/91' + contact.whatsapp" class="text-emerald-700 font-bold">+91 {{ contact.whatsapp }}</a></p>
+                <p>✉️ <strong>Email:</strong> {{ contact.email }}</p>
+                <p>🕒 <strong>Hours:</strong> Mon - Sun: 9:00 AM - 9:00 PM</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border shadow-sm">
+              <h3 class="font-bold text-lg mb-3">Send Us a Direct Message</h3>
+              <form @submit.prevent="submitForm" class="space-y-3">
+                <input v-model="form.name" required placeholder="Full Name" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <input v-model="form.phone" required placeholder="WhatsApp Number" class="w-full px-3 py-2 border rounded-lg text-sm">
+                <textarea v-model="form.message" rows="3" placeholder="Tell us your course query..." class="w-full px-3 py-2 border rounded-lg text-sm"></textarea>
+                <button type="submit" class="w-full py-3 bg-brand-green text-white font-bold rounded-xl text-sm">
+                  Send on WhatsApp ➔
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BLOG MODAL -->
+    <div v-if="selectedBlog" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+      <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative">
+        <button @click="selectedBlog = null" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 font-bold">✕</button>
+        <span class="text-xs font-bold text-brand-green bg-green-50 px-2.5 py-1 rounded">{{ selectedBlog.category }}</span>
+        <h3 class="text-2xl font-bold text-slate-900 mt-2 mb-4">{{ selectedBlog.title }}</h3>
+        <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line mb-6">{{ selectedBlog.content }}</p>
+        <button @click="selectedBlog = null" class="px-5 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">Close</button>
+      </div>
+    </div>
+
+    <!-- INQUIRY MODAL -->
+    <div v-if="modalOpen" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+      <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative">
+        <button @click="modalOpen = false" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 font-bold">✕</button>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="./assets/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full border">
+          <div>
+            <h3 class="font-bold text-slate-900">Book Free Counseling</h3>
+            <p class="text-xs text-brand-green font-semibold">Future Guide Kolkata</p>
+          </div>
+        </div>
+
+        <form @submit.prevent="submitForm" class="space-y-3">
+          <input v-model="form.name" required placeholder="Full Name" class="w-full px-3 py-2 border rounded-lg text-sm">
+          <input v-model="form.phone" required placeholder="WhatsApp Number" class="w-full px-3 py-2 border rounded-lg text-sm">
+          <select v-model="form.course" class="w-full px-2 py-2 border rounded-lg text-sm bg-white">
+            <option>Engineering (B.Tech)</option>
+            <option>Medical (MBBS)</option>
+            <option>Nursing (GNM/B.Sc)</option>
+            <option>Management (MBA/BBA)</option>
+            <option>West Bengal Student Credit Card Help</option>
+          </select>
+          <textarea v-model="form.message" rows="2" placeholder="Your query or marks..." class="w-full px-3 py-2 border rounded-lg text-sm"></textarea>
+          <button type="submit" class="w-full py-2.5 bg-brand-blue text-white font-bold rounded-xl text-sm">Connect with Counselor</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FLOATING WHATSAPP -->
+    <a :href="'https://wa.me/91' + contact.whatsapp + '?text=' + encodeURIComponent('Hello Future Guide, I need admission help.')" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-600 text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2 font-bold text-xs hover:bg-emerald-700">
+      <span>💬 WhatsApp Us</span>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 mt-12 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+        <p class="text-white font-bold text-sm">FUTURE GUIDE — Kolkata Educational Consultancy</p>
+        <p>Helpline: +91 {{ contact.phones[0] }} / +91 {{ contact.phones[1] }} | Email: {{ contact.email }}</p>
+        <p>© 2025-2026 FUTURE GUIDE. Built with Vue.js & React.</p>
+        <div class="pt-2">
+          <a href="index.html" class="text-emerald-400 underline">Switch to React Edition ➔</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const { createApp, ref } = Vue;
+
+    createApp({
+      setup() {
+        const activeTab = ref('home');
+        const mobileMenuOpen = ref(false);
+        const modalOpen = ref(false);
+        const selectedBlog = ref(null);
+
+        const contact = {
+          name: "FUTURE GUIDE",
+          tagline: "Your Admission Partner for a Brighter Tomorrow",
+          pillars: "ENGINEERING • MEDICAL • MANAGEMENT",
+          location: "Kolkata, West Bengal",
+          phones: ["6289212360", "8617765602"],
+          whatsapp: "6289212360",
+          email: "future.guide05@gmail.com"
+        };
+
+        const form = ref({
+          name: '',
+          phone: '',
+          course: 'Engineering (B.Tech)',
+          message: ''
+        });
+
+        const courses = [
+          { id: 'engg', category: 'Engineering & Tech', title: 'B.Tech, M.Tech & Diploma', duration: '3 - 4 Yrs', eligibility: '10+2 with PCM', desc: 'Direct admission in CSE, AI/ML, Data Science, ECE across IEM, Heritage & Techno India.' },
+          { id: 'med', category: 'Medical & Dental', title: 'MBBS, BDS, BAMS & BHMS', duration: '4.5 - 5.5 Yrs', eligibility: 'NEET Qualified + PCB', desc: 'Legitimate admission guidance in WB private colleges, deemed universities & MBBS abroad.' },
+          { id: 'nursing', category: 'Nursing & Paramedical', title: 'GNM & B.Sc Nursing', duration: '3 - 4 Yrs', eligibility: '10+2 Any Stream (GNM) / PCB (B.Sc)', desc: '100% clinical hospital attachments in INC & WBNC recognized premier institutions.' },
+          { id: 'mgmt', category: 'Management & IT', title: 'MBA, PGDM, BBA & BCA', duration: '2 - 3 Yrs', eligibility: '10+2 (UG) / Graduation (PG)', desc: 'Corporate career pathways with placement assistance in top business schools.' },
+          { id: 'pharm', category: 'Pharmacy', title: 'B.Pharm & D.Pharm', duration: '2 - 4 Yrs', eligibility: '10+2 with PCB/PCM', desc: 'PCI recognized programs for clinical drug formulation, QA/QC and licensure.' },
+          { id: 'law', category: 'Legal Studies', title: 'BA LLB, BBA LLB & LLB', duration: '3 - 5 Yrs', eligibility: '10+2 Any Stream', desc: 'Premier BCI approved integrated programs for litigation, corporate law and judiciary.' }
+        ];
+
+        const blogs = [
+          {
+            id: '1',
+            category: 'Scholarships',
+            title: 'Complete Guide to West Bengal Student Credit Card (WBSCC) 2025-26',
+            summary: 'How to claim up to ₹10 Lakhs loan at 4% simple interest for higher studies.',
+            content: 'The West Bengal Student Credit Card scheme provides up to ₹10 Lakhs loan at 4% simple interest. It covers course tuition fees, hostel expenses, books, and laptops. Future Guide assists with bonafide verification and error-free portal submission.'
+          },
+          {
+            id: '2',
+            category: 'Medical',
+            title: 'NEET 200-450 Score: Best Medical Options in India & Abroad',
+            summary: 'Alternative options for MBBS candidates without government seats.',
+            content: 'Scoring between 200 and 450 in NEET UG qualifies you for private medical colleges in West Bengal (KPC, IQ City, JIMSH) as well as top NMC-recognized universities in Bangladesh, Russia, and Uzbekistan with identical clinical curriculum.'
+          }
+        ];
+
+        const submitForm = () => {
+          const text = encodeURIComponent(
+            `*New Inquiry via Future Guide (Vue Edition)*\n` +
+            `*Name:* ${form.value.name}\n` +
+            `*Phone:* ${form.value.phone}\n` +
+            `*Course:* ${form.value.course}\n` +
+            `*Notes:* ${form.value.message || 'Kindly guide with college admission & fees.'}`
+          );
+          window.open(`https://wa.me/91${contact.whatsapp}?text=${text}`, '_blank');
+          modalOpen.value = false;
+        };
+
+        const openInquiryFor = (title) => {
+          form.value.course = title;
+          modalOpen.value = true;
+        };
+
+        const openBlog = (b) => {
+          selectedBlog.value = b;
+        };
+
+        return {
+          activeTab,
+          mobileMenuOpen,
+          modalOpen,
+          selectedBlog,
+          contact,
+          form,
+          courses,
+          blogs,
+          submitForm,
+          openInquiryFor,
+          openBlog
+        };
+      }
+    }).mount('#vue-app');
+  </script>
+</body>
+</html>

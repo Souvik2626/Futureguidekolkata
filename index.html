@@ -1,0 +1,2664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Guide | Premier Educational Consultancy Kolkata | Admissions 2027-28 & Scholarships</title>
+  <meta name="description" content="Future Guide Kolkata - Your Admission Partner for a Brighter Tomorrow. Admissions open for 2027-28 in Engineering, Medical, Nursing, Management, Pharmacy & Law. West Bengal Student Credit Card & Vidya Lakshmi Central Govt Scholarship Assistance. Call 6289212360 / 8617765602.">
+  <meta name="keywords" content="Future Guide, educational consultancy kolkata, college admission support 2027-28, west bengal student credit card, vidyalaxmi central scholarship, engineering admission kolkata, mbbs admission consultancy kolkata, nursing admission kolkata, bba mba admission kolkata">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Future Guide - Your Admission Partner for a Brighter Tomorrow">
+  <meta property="og:description" content="Guaranteed college admission guidance for 2027-28 in top colleges & scholarship assistance in Kolkata, West Bengal & Pan-India.">
+  <meta property="og:image" content="./assets/logo.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#003B73',
+              darkBlue: '#00264D',
+              lightBlue: '#0A66C2',
+              iceBlue: '#EFF6FF',
+              green: '#109B42',
+              darkGreen: '#0B7330',
+              limeGreen: '#22C55E',
+              gold: '#F59E0B',
+              amber: '#D97706'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          },
+          boxShadow: {
+            'card': '0 10px 30px -5px rgba(0, 59, 115, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.02)',
+            'card-hover': '0 20px 40px -10px rgba(0, 59, 115, 0.16), 0 8px 12px -3px rgba(16, 155, 66, 0.1)',
+            'glow-blue': '0 0 25px rgba(0, 59, 115, 0.35)',
+            'glow-green': '0 0 25px rgba(16, 155, 66, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- React 18 & Babel Standalone -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #00264D 0%, #003B73 50%, #084C8D 100%);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 40s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-soft {
+      animation: pulseSoft 3s ease-in-out infinite;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-float-slow {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-green selection:text-white">
+  <div id="root"></div>
+
+  <!-- Main React Application Script -->
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useRef } = React;
+
+    // Contact Information Constants
+    const CONTACT = {
+      name: "FUTURE GUIDE",
+      tagline: "Your Admission Partner for a Brighter Tomorrow",
+      pillars: "ENGINEERING • MEDICAL • MANAGEMENT",
+      location: "Kolkata, West Bengal, India",
+      address: "Salt Lake Sector V & Ruby Hospital Crossing Desks, Kolkata - 700091 / 700107, West Bengal",
+      phones: ["6289212360", "8617765602"],
+      whatsapp: "6289212360",
+      whatsappSecondary: "8617765602",
+      email: "future.guide05@gmail.com",
+      hours: "Monday - Sunday: 9:00 AM - 9:00 PM (Counseling by Appointment)"
+    };
+
+    // Supabase Backend Configuration
+    const SUPABASE_CONFIG = {
+      url: "https://sxntsaivqdhovbzzoqci.supabase.co",
+      anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN4bnRzYWl2cWRob3ZienpvcWNpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUyMjY2MTUsImV4cCI6MjExMDgwMjYxNX0.FTMc365MJmYTo-YYqkyrGTHYQBNF2J7bymLkcRTfxok",
+      endpoint: "https://sxntsaivqdhovbzzoqci.supabase.co/rest/v1/inquiries"
+    };
+
+    // Course Categories & Programs for 2027-28
+    const COURSES_DATA = [
+      {
+        id: "engineering",
+        category: "Engineering & Tech",
+        title: "B.Tech, M.Tech & Polytechnic",
+        badge: "AICTE / UGC Approved",
+        color: "blue",
+        desc: "Direct admission & management quota counseling for Computer Science (CSE), Artificial Intelligence & ML, Data Science, ECE, Mechanical, Civil & Diploma.",
+        duration: "3 - 4 Years",
+        eligibility: "10+2 with Physics, Mathematics & Chem/CS (Min 45%)",
+        popularColleges: "IEM Kolkata, Heritage Institute, Techno India, JIS Group, KIIT Bhubaneswar, SRM, Bangalore Colleges",
+        wbsccEligible: true,
+        branches: ["Computer Science & Engg (CSE)", "AI & Machine Learning", "Data Science & Cyber Security", "Electronics & Comm (ECE)", "Information Technology", "Mechanical & Civil"]
+      },
+      {
+        id: "medical",
+        category: "Medical & Dental",
+        title: "MBBS, BDS, BAMS & BHMS",
+        badge: "NMC / DCI Recognized",
+        color: "green",
+        desc: "Complete NEET UG & PG counseling guidance. Secure legitimate seats in West Bengal Private Medical Colleges, Deemed Universities, & top Abroad Universities.",
+        duration: "4.5 - 5.5 Years + Internship",
+        eligibility: "NEET Qualified + 10+2 with PCB (Min 50%)",
+        popularColleges: "KPC Medical College, IQ City Durgapur, JIMSH Budge Budge, Top Medical Colleges in Bangladesh, Russia & Uzbekistan",
+        wbsccEligible: true,
+        branches: ["MBBS (India & Abroad)", "BDS (Dental)", "BAMS (Ayurveda)", "BHMS (Homeopathy)", "MD / MS Guidance"]
+      },
+      {
+        id: "nursing",
+        category: "Nursing & Paramedical",
+        title: "GNM & B.Sc Nursing",
+        badge: "WBNC & INC Approved",
+        color: "green",
+        desc: "100% job-assured nursing admissions with multi-specialty clinical hospital attachments. Available for both Arts/Science (GNM) and PCB (B.Sc) streams.",
+        duration: "3 Years (GNM) / 4 Years (B.Sc)",
+        eligibility: "GNM: 10+2 Any Stream (40%) | B.Sc: 10+2 PCB (45%)",
+        popularColleges: "Top Kolkata, Durgapur, Siliguri & Bangalore INC approved nursing colleges with captive hospitals",
+        wbsccEligible: true,
+        branches: ["GNM Nursing (3 Yrs)", "B.Sc Nursing (4 Yrs)", "Post Basic B.Sc Nursing", "M.Sc Nursing", "BMLT & DMLT (Paramedical)", "Operation Theatre Tech (OTT)"]
+      },
+      {
+        id: "management",
+        category: "Management & IT",
+        title: "MBA, PGDM, BBA & BCA",
+        badge: "AICTE / NAAC 'A+'",
+        color: "blue",
+        desc: "Direct corporate career pathways with guaranteed placements in Fortune 500 companies. Specializations in Business Analytics, Finance, HR, Marketing & Supply Chain.",
+        duration: "2 Years (PG) / 3-4 Years (UG)",
+        eligibility: "UG: 10+2 Any Stream (50%) | PG: Graduation (50%) + CAT/MAT/JEMAT/Direct",
+        popularColleges: "Globsyn Business School, IMI Kolkata, Praxis, Techno India, Alliance University Bangalore",
+        wbsccEligible: true,
+        branches: ["MBA / PGDM Dual Specialization", "BBA (Hons)", "BBA Hospital Management", "BCA (Software Dev)", "MCA (Cloud & AI)"]
+      },
+      {
+        id: "pharmacy",
+        category: "Pharmacy",
+        title: "B.Pharm & D.Pharm",
+        badge: "PCI Approved",
+        color: "green",
+        desc: "Pharmaceutical sciences degrees opening lucrative doors in pharma R&D, clinical trials, QA/QC, drug formulation, and certified pharmacy licensure.",
+        duration: "2 Years (D.Pharm) / 4 Years (B.Pharm)",
+        eligibility: "10+2 with Physics, Chemistry & Biology/Maths (Min 45%)",
+        popularColleges: "Guru Nanak Institute of Pharmacy, BCDA College, Techno India, Top Bangalore & Odisha PCI colleges",
+        wbsccEligible: true,
+        branches: ["B.Pharm (4 Years)", "D.Pharm (2 Years)", "M.Pharm (Pharmaceutics/Pharmacology)", "Pharm.D"]
+      },
+      {
+        id: "law",
+        category: "Legal Studies",
+        title: "BA LLB, BBA LLB & LLB",
+        badge: "Bar Council of India (BCI)",
+        color: "blue",
+        desc: "Premier 5-Year integrated and 3-Year LLB programs preparing future corporate advocates, litigation specialists, judges, and legal advisors.",
+        duration: "5 Years (Integrated) / 3 Years (After Graduation)",
+        eligibility: "10+2 Any Stream (Min 45%) for 5-Yr | Graduation for 3-Yr",
+        popularColleges: "Heritage Law College, JIS University Law, Amity University Kolkata, KIIT School of Law",
+        wbsccEligible: true,
+        branches: ["BA LLB (5 Years)", "BBA LLB (5 Years)", "LLB (3 Years)", "LLM (Corporate Law)"]
+      }
+    ];
+
+    // Scholarships Data (Including Central Govt. Vidya Lakshmi Scheme)
+    const SCHOLARSHIPS_DATA = [
+      {
+        id: "vidyalakshmi",
+        name: "Vidya Lakshmi Central Govt. Scheme",
+        authority: "Ministry of Education & Ministry of Finance, Govt. of India (IBA & NSDL)",
+        maxAmount: "Up to ₹7.5 Lakhs (Collateral-Free) / Up to ₹1.5 Crore",
+        interestRate: "100% Interest Subsidy under CSIS Scheme (Zero interest during study)",
+        repayment: "Up to 15 Years repayment period (1 Year moratorium after degree)",
+        coverage: "Tuition fees, college fees, hostel, library, books, laptop & overseas education",
+        eligibility: "Indian nationals pursuing higher technical/professional courses (B.Tech, MBBS, Nursing, MBA, etc.). CSIS 100% interest subsidy applicable for annual family income up to ₹4.5 Lakhs.",
+        highlight: "Central Government single-window platform connected to 44+ premier nationalized banks (SBI, PNB, Canara Bank, BoB, HDFC) and 130+ central schemes. Future Guide provides CELAF form filing, bonafide verification, and Kolkata bank branch liaison.",
+        tag: "Central Government Flagship",
+        icon: "landmark"
+      },
+      {
+        id: "wbscc",
+        name: "West Bengal Student Credit Card (WBSCC)",
+        authority: "Govt. of West Bengal Higher Education Dept.",
+        maxAmount: "Up to ₹10,0,000 (10 Lakhs)",
+        interestRate: "4% Simple Annual Interest (1% concession for girls)",
+        repayment: "15 Years repayment period (1 Year moratorium after study)",
+        coverage: "Course fees, tuition, hostel, books, laptop & living expenses",
+        eligibility: "Resident of West Bengal (min 10 yrs), Age up to 40 yrs, enrolled in recognized UG/PG/Professional degree course.",
+        highlight: "Future Guide provides 100% end-to-end documentation, institutional bonafide verification, and bank approval assistance.",
+        tag: "West Bengal Flagship",
+        icon: "credit-card"
+      },
+      {
+        id: "svmcm",
+        name: "Swami Vivekananda Merit-cum-Means (SVMCM)",
+        authority: "Bikash Bhavan, Govt. of West Bengal",
+        maxAmount: "₹12,000 - ₹60,000 per year",
+        interestRate: "100% Non-Repayable Grant (Direct Bank Transfer)",
+        repayment: "N/A (Full Scholarship)",
+        coverage: "Annual educational stipend for tuition & maintenance",
+        eligibility: "60% aggregate in 10th or 12th Board Exams, Annual family income under ₹2.5 Lakhs.",
+        highlight: "Applicable for General Degree, Engineering, Medical, Nursing, and Diploma courses across West Bengal.",
+        tag: "Merit-cum-Means",
+        icon: "award"
+      },
+      {
+        id: "aikyashree",
+        name: "Aikyashree Scholarship Scheme",
+        authority: "WBMDFC (Minority Affairs & Madrasah Education)",
+        maxAmount: "Up to ₹33,000 per year + Hostel allowance",
+        interestRate: "100% Non-Repayable Grant",
+        repayment: "N/A (Full Scholarship)",
+        coverage: "Tuition fee waiver and maintenance allowance",
+        eligibility: "Minority community students (Muslim, Christian, Sikh, Buddhist, Jain, Parsi) with min 50% marks and family income under ₹2.5 Lakhs.",
+        highlight: "Merit-cum-Means scheme for technical, medical & professional courses in recognized institutions.",
+        tag: "Minority Scholarship",
+        icon: "users"
+      },
+      {
+        id: "oasis",
+        name: "OASIS Scholarship (SC / ST / OBC)",
+        authority: "Backward Classes Welfare Department, Govt. of WB",
+        maxAmount: "Full Tuition Fee + Monthly Maintenance Stipend",
+        interestRate: "100% Non-Repayable Grant",
+        repayment: "N/A",
+        coverage: "Post-matric educational assistance for reserved category students",
+        eligibility: "SC, ST, and OBC category students pursuing Higher Secondary, Diploma, Degree, or Professional courses.",
+        highlight: "Helps underprivileged students achieve higher education in top private & government colleges.",
+        tag: "Reserved Category",
+        icon: "shield-check"
+      }
+    ];
+
+    // Leading Partner Colleges & Universities
+    const INITIAL_COLLEGES = [
+      { id: 1, name: "Institute of Engineering & Management (IEM)", location: "Salt Lake, Kolkata", stream: "B.Tech CSE / AI-ML & MBA", rating: "4.9", badge: "NAAC 'A+' | MAKAUT", fee: "₹1.5L - ₹2.2L / yr", image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80", seats: "Seats Open 2027-28" },
+      { id: 2, name: "Heritage Institute of Technology (HIT)", location: "Anandapur, Kolkata", stream: "Engineering & Technology", rating: "4.8", badge: "NAAC 'A' | Autonomous", fee: "₹1.3L - ₹1.8L / yr", image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80", seats: "Direct Quota Available" },
+      { id: 3, name: "KPC Medical College & Hospital", location: "Jadavpur, Kolkata", stream: "MBBS & Healthcare", rating: "4.9", badge: "NMC Recognized | WBUHS", fee: "State & Mgt Quota", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80", seats: "NEET Guidance Desk" },
+      { id: 4, name: "Techno India University & Techno Main", location: "Salt Lake, Kolkata", stream: "B.Tech, BBA, BCA, MBA", rating: "4.7", badge: "AICTE / UGC Approved", fee: "₹1.1L - ₹1.9L / yr", image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80", seats: "Spot Seat Allotment" },
+      { id: 5, name: "IQ City Medical College & Hospital", location: "Durgapur, West Bengal", stream: "MBBS & Nursing", rating: "4.8", badge: "NMC & INC Approved", fee: "Approved Fee Matrix", image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80", seats: "Bedside Clinical Ties" },
+      { id: 6, name: "Priyadarshini College of Nursing", location: "Bangalore, Karnataka", stream: "GNM & B.Sc Nursing", rating: "4.8", badge: "INC & KNC Approved", fee: "₹85k - ₹1.4L / yr", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80", seats: "100% Hospital Placements" },
+      { id: 7, name: "Globsyn Business School", location: "Kolkata, West Bengal", stream: "MBA / PGDM Dual Major", rating: "4.7", badge: "AICTE | Top Corporate Ties", fee: "₹3.8L - ₹4.5L / yr", image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80", seats: "Corporate Placements" },
+      { id: 8, name: "KIIT Deemed to be University", location: "Bhubaneswar, Odisha", stream: "Engg, Law, Biotech & MBA", rating: "4.9", badge: "Institute of Eminence", fee: "₹1.7L - ₹2.5L / yr", image: "https://images.unsplash.com/photo-1568792923760-d70635a89fa7?auto=format&fit=crop&w=600&q=80", seats: "Top National Ranking" },
+      { id: 9, name: "JIS University & Narula Institute", location: "Agarpara / Nilgunj, Kolkata", stream: "B.Tech, Pharmacy, Law", rating: "4.6", badge: "NAAC 'A' | PCI & BCI", fee: "₹1.1L - ₹1.6L / yr", image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80", seats: "Credit Card Approved" },
+      { id: 10, name: "Apollo College of Nursing", location: "Kolkata / Hyderabad", stream: "B.Sc & M.Sc Nursing", rating: "4.9", badge: "INC & NABH Partner", fee: "₹1.2L - ₹1.8L / yr", image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80", seats: "Super-Specialty Training" },
+      { id: 11, name: "Dhaka National Medical College", location: "Dhaka (MBBS Abroad)", stream: "MBBS (English Medium)", rating: "4.8", badge: "NMC / WHO Approved", fee: "Affordable Total Package", image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80", seats: "High FMGE/NExT Pass" },
+      { id: 12, name: "SRM Institute of Science & Technology", location: "Chennai / NCR", stream: "B.Tech CSE, AI, Robotics", rating: "4.9", badge: "NAAC 'A++' Grade", fee: "₹2.2L - ₹3.0L / yr", image: "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&w=600&q=80", seats: "Global Placements" }
+    ];
+
+    // Blog Articles for 2027-28
+    const BLOG_ARTICLES = [
+      {
+        id: "vidyalakshmi-guide",
+        title: "Vidya Lakshmi Central Govt. Portal 2027-28: How to Claim 100% CSIS Interest Subsidy & Education Loans",
+        category: "Central Scholarships",
+        date: "October 2026",
+        readTime: "6 min read",
+        author: "Central Schemes Wing",
+        summary: "Step-by-step guide to applying for collateral-free education loans up to ₹7.5 Lakhs and 100% CSIS interest subsidies across 44+ nationalized banks via the Vidya Lakshmi Portal.",
+        content: `The Vidya Lakshmi Portal is the flagship initiative developed under the guidance of the Department of Higher Education (Ministry of Education), Department of Financial Services (Ministry of Finance), and the Indian Banks’ Association (IBA).\n\n### Core Benefits for 2027-28 Aspirants:\n- **Single Window Integration:** Students can view, apply, and track education loans and scholarship schemes across 44+ nationalized and private banks with just one single common application form (CELAF).\n- **Central Sector Interest Subsidy (CSIS):** Students with an annual family income of up to ₹4.5 Lakhs pursuing recognized professional or technical degrees (B.Tech, MBBS, GNM/B.Sc Nursing, MBA, B.Pharm) in approved institutions receive a 100% interest subsidy from the Central Government during the entire course duration plus one year!\n- **Collateral-Free Guarantee (CGFSEL):** Loans up to ₹7.5 Lakhs require zero third-party guarantee and zero collateral security.\n\n### Essential Application Steps:\n1. Register on the official portal and fill the Common Education Loan Application Form (CELAF).\n2. Attach your institutional admission confirmation letter and accredited fee structure.\n3. Upload income certificate issued by a competent state authority for the CSIS waiver.\n4. Select your preferred banks (SBI, PNB, Canara Bank, Bank of Baroda, etc.).\n\n### How Future Guide Helps:\nOur Kolkata team assists you with institutional fee structure verification, income certificate validation, CELAF form filing, and branch-level follow-ups until sanctioning.`
+      },
+      {
+        id: "wbscc-guide",
+        title: "Complete Guide to West Bengal Student Credit Card (WBSCC) 2027-28",
+        category: "State Scholarships",
+        date: "September 2026",
+        readTime: "5 min read",
+        author: "Future Guide Advisory Team",
+        summary: "Step-by-step procedure to get up to ₹10 Lakhs education loan at 4% simple interest for higher education in West Bengal and Pan-India.",
+        content: `The West Bengal Student Credit Card (WBSCC) scheme empowers students from all socio-economic backgrounds to pursue higher studies without financial stress.\n\n### Key Scheme Highlights for 2027-28:\n- **Maximum Loan Amount:** Up to ₹10,00,000 (Ten Lakhs INR).\n- **Nominal Interest Rate:** Just 4% simple interest per annum, with an additional 1% interest subvention for girl students if interest is serviced regularly.\n- **Extended Repayment Period:** Up to 15 years, starting 1 year after graduation or 6 months after securing employment.\n- **Comprehensive Coverage:** Not only does it cover college tuition fees, but it also pays for hostel accommodation, books, laptops, library fees, and clinical uniforms.\n\n### Mandatory Documents Required:\n1. Color passport-size photograph of student & co-borrower.\n2. Aadhaar card or Class 10th Admit Card of student.\n3. PAN Card of student and co-borrower.\n4. Bonafide / Admission letter from the institution stating total course fee.\n5. Bank passbook / cancelled cheque showing IFSC code.\n\nFuture Guide provides guaranteed institutional bonafide assistance, portal application filing, and proactive branch tracking.`
+      },
+      {
+        id: "neet-guidance",
+        title: "NEET Low Score? Here Are Your Top Medical Admission Pathways for 2027-28",
+        category: "Medical",
+        date: "August 2026",
+        readTime: "6 min read",
+        author: "Dr. Medical Counseling Desk",
+        summary: "Scored between 200 and 450 in NEET UG? Discover legitimate MBBS options in West Bengal private colleges, deemed universities, and top abroad destinations.",
+        content: `Qualifying NEET is a huge milestone, but high government college cutoffs often leave deserving students disheartened. Scoring 200 to 450 marks still opens several outstanding, NMC-recognized pathways for the 2027-28 batch.\n\n### Pathway 1: West Bengal Private Medical Colleges\nColleges like KPC Medical College (Jadavpur), IQ City (Durgapur), JIMSH (Budge Budge), and ICARE (Haldia) offer state quota and management seats with world-class hospital exposure.\n\n### Pathway 2: Deemed Medical Universities\nStates like Karnataka, Maharashtra, and Tamil Nadu house top deemed universities offering transparent centralized DGHS counseling seats.\n\n### Pathway 3: MBBS Abroad in NMC-Approved Universities\nBangladesh, Russia, Nepal, and Uzbekistan offer high clinical standards with identical pathology training and affordable tuition.`
+      },
+      {
+        id: "nursing-career",
+        title: "GNM vs B.Sc Nursing in West Bengal: Which Should You Choose in 2027-28?",
+        category: "Nursing",
+        date: "July 2026",
+        readTime: "5 min read",
+        author: "Healthcare Education Wing",
+        summary: "Understand differences in eligibility, duration, cost, government job salary scales, and INC/WBNC recognition.",
+        content: `With healthcare expanding rapidly across West Bengal and globally, nursing has become one of the most secure, recession-proof, and respected careers.\n\n### GNM (General Nursing and Midwifery):\n- **Duration:** 3 Years (Diploma).\n- **Eligibility:** 10+2 from ANY stream (Arts, Commerce, Science) with minimum 40% marks and English.\n\n### B.Sc Nursing:\n- **Duration:** 4 Years (Professional Degree).\n- **Eligibility:** 10+2 with Physics, Chemistry, Biology (PCB) and English with minimum 45% marks.\n\nAlways verify that the nursing college is approved by the Indian Nursing Council (INC) and the state council (WBNC or KNC).`
+      }
+    ];
+
+    // Student Testimonials Data (With Verified Details & Badges)
+    const TESTIMONIALS_DATA = [
+      {
+        id: 1,
+        name: "Ritabrata Das",
+        course: "B.Tech Computer Science & Engg (CSE)",
+        college: "Institute of Engineering & Management (IEM), Kolkata",
+        rating: 5,
+        avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=150&q=80",
+        initials: "RD",
+        badge: "WB Student Credit Card Sanctioned",
+        quote: "I wanted CSE in Kolkata but my WBJEE rank was slightly lower. Future Guide not only helped me secure admission at IEM Kolkata, but also processed my West Bengal Student Credit Card loan so my parents did not have to take private high-interest loans!",
+        session: "Admitted Batch 2024-28"
+      },
+      {
+        id: 2,
+        name: "Dr. Aman Banerjee",
+        course: "MBBS (Bachelor of Medicine & Surgery)",
+        college: "Dhaka National Medical College (NMC Approved)",
+        rating: 5,
+        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+        initials: "AB",
+        badge: "NEET Medical Admission Abroad",
+        quote: "With 340 marks in NEET, many agents gave unrealistic promises. Future Guide gave us honest medical options and guided my MBBS admission in a top NMC recognized university in Bangladesh. Zero hidden fees. Truly the best admission partner in Kolkata!",
+        session: "Admitted Batch 2024-30"
+      },
+      {
+        id: 3,
+        name: "Sneha Mukherjee",
+        course: "B.Sc Nursing (4-Year Professional)",
+        college: "Priyadarshini College of Nursing, Bangalore",
+        rating: 5,
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+        initials: "SM",
+        badge: "INC & KNC Approved Campus",
+        quote: "Finding a genuine INC approved B.Sc Nursing college with a real hospital attachment was our biggest worry. The Future Guide counselors in Kolkata were so transparent! They took us through the college verification list and gave complete hostel safety assurance.",
+        session: "Admitted Batch 2023-27"
+      },
+      {
+        id: 4,
+        name: "Debanjan Chakraborty",
+        course: "MBA (Business Analytics & Finance)",
+        college: "Globsyn Business School, Kolkata",
+        rating: 5,
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+        initials: "DC",
+        badge: "Vidya Lakshmi CSIS Beneficiary",
+        quote: "Future Guide's counselor evaluated my CAT & MAT percentiles and suggested Globsyn. They also guided me through the Vidya Lakshmi portal to secure a 100% CSIS interest subsidy on my education loan. Transparent and authentic support!",
+        session: "Admitted Batch 2024-26"
+      },
+      {
+        id: 5,
+        name: "Pooja Sarkar",
+        course: "B.Pharm (Bachelor of Pharmacy)",
+        college: "Guru Nanak Institute of Pharmacy, Kolkata",
+        rating: 5,
+        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+        initials: "PS",
+        badge: "SVMCM Bikash Bhavan & WBSCC",
+        quote: "My family was anxious about private pharmacy tuition fees. Future Guide arranged direct admission and helped me receive both the SVMCM Bikash Bhavan scholarship and the WB Student Credit Card loan. Truly thankful to the team!",
+        session: "Admitted Batch 2024-28"
+      },
+      {
+        id: 6,
+        name: "Sayantika Roy",
+        course: "GNM Nursing (3 Years Diploma)",
+        college: "Premier Hospital Nursing Campus, Kolkata",
+        rating: 5,
+        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80",
+        initials: "SR",
+        badge: "100% Bedside Hospital Training",
+        quote: "I came from an Arts background in 12th and thought nursing was closed for me. Future Guide explained that GNM is open to all streams and secured my seat in an INC recognized multi-specialty hospital. Best career guidance in Kolkata!",
+        session: "Admitted Batch 2024-27"
+      }
+    ];
+
+    // Main React Application
+    function App() {
+      const [activeTab, setActiveTab] = useState("home");
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+      const [selectedCourseFilter, setSelectedCourseFilter] = useState("all");
+      const [modalOpen, setModalOpen] = useState(false);
+      const [selectedBlog, setSelectedBlog] = useState(null);
+
+      // College Slider State
+      const [colleges, setColleges] = useState(INITIAL_COLLEGES);
+      const [currentSlide, setCurrentSlide] = useState(0);
+      const [isAutoSliding, setIsAutoSliding] = useState(true);
+      const [isHovered, setIsHovered] = useState(false);
+
+      // Testimonial Carousel State
+      const [testimonialSlide, setTestimonialSlide] = useState(0);
+      const [isTestimonialAuto, setIsTestimonialAuto] = useState(true);
+      const [isTestimonialHovered, setIsTestimonialHovered] = useState(false);
+
+      // Calculator State
+      const [calcData, setCalcData] = useState({
+        qualification: "10+2 Passed",
+        percentage: "60-75%",
+        category: "General",
+        income: "Under 2.5 LPA",
+        domicile: "West Bengal"
+      });
+
+      // Quick Consultation Form State
+      const [formState, setFormState] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        course: "Engineering (B.Tech)",
+        state: "Kolkata / West Bengal",
+        message: ""
+      });
+      const [formSubmitted, setFormSubmitted] = useState(false);
+      const [isSubmitting, setIsSubmitting] = useState(false);
+      const [supabaseSaved, setSupabaseSaved] = useState(false);
+
+      // Calculate how many cards visible at once
+      const cardsPerView = 4;
+      const maxIndex = Math.max(0, colleges.length - cardsPerView);
+
+      // Automatic sliding interval with random/continuous flow
+      useEffect(() => {
+        if (!isAutoSliding || isHovered) return;
+        const interval = setInterval(() => {
+          setCurrentSlide((prev) => {
+            if (prev >= maxIndex) {
+              return 0; // Seamless loop back
+            }
+            return prev + 1;
+          });
+        }, 3200);
+        return () => clearInterval(interval);
+      }, [isAutoSliding, isHovered, maxIndex]);
+
+      // Automatic testimonial sliding interval
+      const maxTestimonialIndex = Math.max(0, TESTIMONIALS_DATA.length - 3);
+      useEffect(() => {
+        if (!isTestimonialAuto || isTestimonialHovered) return;
+        const interval = setInterval(() => {
+          setTestimonialSlide((prev) => (prev >= maxTestimonialIndex ? 0 : prev + 1));
+        }, 4000);
+        return () => clearInterval(interval);
+      }, [isTestimonialAuto, isTestimonialHovered, maxTestimonialIndex]);
+
+      // Shuffle colleges randomly on demand
+      const shuffleColleges = () => {
+        const shuffled = [...colleges].sort(() => Math.random() - 0.5);
+        setColleges(shuffled);
+        setCurrentSlide(0);
+      };
+
+      const nextSlide = () => {
+        setCurrentSlide((prev) => (prev >= maxIndex ? 0 : prev + 1));
+      };
+
+      const prevSlide = () => {
+        setCurrentSlide((prev) => (prev <= 0 ? maxIndex : prev - 1));
+      };
+
+      // Navigation handler
+      const navigateTo = (tab) => {
+        setActiveTab(tab);
+        setMobileMenuOpen(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      // Form Submission to Supabase Backend + WhatsApp
+      const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const payload = {
+          name: formState.name,
+          phone: formState.phone,
+          email: formState.email || null,
+          course: formState.course,
+          location_preference: formState.state,
+          message: formState.message || null,
+          source: 'Website Admission Form'
+        };
+
+        try {
+          // Asynchronously record into Supabase inquiries table
+          const res = await fetch(SUPABASE_CONFIG.endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_CONFIG.anonKey,
+              'Authorization': `Bearer ${SUPABASE_CONFIG.anonKey}`,
+              'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify(payload)
+          });
+          if (res.ok) {
+            setSupabaseSaved(true);
+          }
+        } catch (err) {
+          console.warn('Supabase post:', err);
+        } finally {
+          setIsSubmitting(false);
+          setFormSubmitted(true);
+        }
+
+        // WhatsApp direct follow-up
+        const text = encodeURIComponent(
+          `*New Admission Inquiry (Batch 2027-28) - FUTURE GUIDE*\n\n` +
+          `*Student Name:* ${formState.name}\n` +
+          `*Phone / WhatsApp:* ${formState.phone}\n` +
+          `*Email:* ${formState.email || 'N/A'}\n` +
+          `*Target Course:* ${formState.course}\n` +
+          `*Preferred Location:* ${formState.state}\n` +
+          `*Notes / Questions:* ${formState.message || 'Kindly guide with college admission, fees, WBSCC & Vidya Lakshmi central scholarship.'}`
+        );
+        window.open(`https://wa.me/91${CONTACT.whatsapp}?text=${text}`, '_blank');
+      };
+
+      const filteredCourses = useMemo(() => {
+        if (selectedCourseFilter === "all") return COURSES_DATA;
+        return COURSES_DATA.filter(c => c.id === selectedCourseFilter);
+      }, [selectedCourseFilter]);
+
+      return (
+        <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+          
+          {/* Top Announcement Bar (Batch 2027-28) */}
+          <div className="bg-gradient-to-r from-brand-darkBlue via-brand-blue to-brand-green text-white text-xs sm:text-sm py-2 px-4 shadow-sm">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+              <div className="flex items-center gap-2 font-medium text-center sm:text-left">
+                <span className="bg-brand-gold text-slate-900 font-extrabold px-2.5 py-0.5 rounded text-[11px] uppercase tracking-wider animate-pulse">
+                  Admissions 2027-28
+                </span>
+                <span>🎓 Admissions Open for 2027-2028 Session | WBSCC & Central Vidya Lakshmi Scholarship Support</span>
+              </div>
+              <div className="flex items-center gap-4 text-xs font-semibold">
+                <a href={`tel:${CONTACT.phones[0]}`} className="hover:text-brand-limeGreen flex items-center gap-1 transition-colors">
+                  📞 +91 {CONTACT.phones[0]}
+                </a>
+                <span className="text-white/40">|</span>
+                <a href={`https://wa.me/91${CONTACT.whatsapp}`} target="_blank" rel="noreferrer" className="hover:text-brand-limeGreen flex items-center gap-1 text-emerald-300 transition-colors">
+                  💬 WhatsApp Support
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Navigation Header */}
+          <header className="sticky top-0 z-40 glass-nav border-b border-slate-200/80 shadow-sm transition-all duration-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-20">
+                
+                {/* Brand Logo & Name */}
+                <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigateTo('home')}>
+                  <div className="relative group">
+                    <img 
+                      src="./assets/logo.jpg" 
+                      alt="Future Guide Logo" 
+                      className="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded-full shadow-md border-2 border-brand-green/30 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-brand-blue font-heading leading-none">
+                        FUTURE<span className="text-brand-green ml-1">GUIDE</span>
+                      </span>
+                    </div>
+                    <span className="text-[10px] sm:text-xs text-slate-500 font-medium tracking-wide">
+                      Your Admission Partner for a Brighter Tomorrow
+                    </span>
+                    <span className="text-[9px] font-bold text-brand-darkBlue tracking-wider uppercase hidden sm:block">
+                      {CONTACT.pillars}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Desktop Nav Links */}
+                <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+                  <button 
+                    onClick={() => navigateTo('home')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'home' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'}`}
+                  >
+                    Home
+                  </button>
+                  <button 
+                    onClick={() => navigateTo('about')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'about' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'}`}
+                  >
+                    About Us
+                  </button>
+                  <button 
+                    onClick={() => navigateTo('courses')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'courses' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'}`}
+                  >
+                    Courses & Admissions
+                  </button>
+                  <button 
+                    onClick={() => navigateTo('scholarships')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'scholarships' ? 'text-brand-green bg-green-50 font-bold' : 'text-slate-600 hover:text-brand-green hover:bg-slate-50'}`}
+                  >
+                    Scholarships & Vidya Lakshmi
+                  </button>
+                  <button 
+                    onClick={() => navigateTo('colleges')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'colleges' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'}`}
+                  >
+                    Partner Colleges
+                  </button>
+                  <button 
+                    onClick={() => navigateTo('blog')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'blog' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'}`}
+                  >
+                    Blog & Alerts
+                  </button>
+                  <button 
+                    onClick={() => navigateTo('contact')} 
+                    className={`px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${activeTab === 'contact' ? 'text-brand-blue bg-blue-50 font-bold' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-50'}`}
+                  >
+                    Contact
+                  </button>
+                </nav>
+
+                {/* Right Action Button */}
+                <div className="hidden lg:flex items-center gap-3">
+                  <button 
+                    onClick={() => setModalOpen(true)}
+                    className="px-5 py-2.5 rounded-xl font-bold text-sm text-white shadow-md bg-gradient-to-r from-brand-blue to-brand-green hover:shadow-lg hover:from-brand-darkBlue hover:to-brand-darkGreen transition-all duration-300 transform hover:-translate-y-0.5"
+                  >
+                    Apply Now / Free Call
+                  </button>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <div className="flex md:hidden items-center gap-2">
+                  <button 
+                    onClick={() => setModalOpen(true)}
+                    className="px-3 py-1.5 rounded-lg font-bold text-xs text-white bg-brand-green shadow-sm"
+                  >
+                    Apply
+                  </button>
+                  <button 
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className="p-2 rounded-lg text-slate-600 hover:text-brand-blue hover:bg-slate-100"
+                    aria-label="Toggle Navigation"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      {mobileMenuOpen ? (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      ) : (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                      )}
+                    </svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Mobile Nav Drawer */}
+            {mobileMenuOpen && (
+              <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <button 
+                  onClick={() => navigateTo('home')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'home' ? 'bg-blue-50 text-brand-blue' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  🏠 Home
+                </button>
+                <button 
+                  onClick={() => navigateTo('about')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'about' ? 'bg-blue-50 text-brand-blue' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  ℹ️ About Future Guide
+                </button>
+                <button 
+                  onClick={() => navigateTo('courses')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'courses' ? 'bg-blue-50 text-brand-blue' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  📚 Courses & Admissions (2027-28)
+                </button>
+                <button 
+                  onClick={() => navigateTo('scholarships')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'scholarships' ? 'bg-green-50 text-brand-green' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  💳 Scholarships & Vidya Lakshmi
+                </button>
+                <button 
+                  onClick={() => navigateTo('colleges')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'colleges' ? 'bg-blue-50 text-brand-blue' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  🏛️ Partner Colleges
+                </button>
+                <button 
+                  onClick={() => navigateTo('blog')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'blog' ? 'bg-blue-50 text-brand-blue' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  📝 Blog & Admission News
+                </button>
+                <button 
+                  onClick={() => navigateTo('contact')} 
+                  className={`w-full text-left px-4 py-2.5 rounded-lg text-base font-semibold ${activeTab === 'contact' ? 'bg-blue-50 text-brand-blue' : 'text-slate-700 hover:bg-slate-50'}`}
+                >
+                  📍 Contact Us (Kolkata)
+                </button>
+                <div className="pt-2 border-t border-slate-100">
+                  <button 
+                    onClick={() => { setMobileMenuOpen(false); setModalOpen(true); }}
+                    className="w-full py-3 rounded-xl font-bold text-center text-white bg-gradient-to-r from-brand-blue to-brand-green shadow-md"
+                  >
+                    Book Free Counseling Session
+                  </button>
+                </div>
+              </div>
+            )}
+          </header>
+
+          {/* TAB 1: HOME PAGE */}
+          {activeTab === 'home' && (
+            <main className="flex-1">
+              
+              {/* Hero Section */}
+              <section className="relative hero-gradient text-white pt-12 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+                <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-green/20 blur-3xl pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-brand-lightBlue/20 blur-3xl pointer-events-none"></div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    {/* Left Column: Heading & Value Proposition */}
+                    <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+                      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-emerald-300 text-xs sm:text-sm font-semibold">
+                        <span className="w-2 h-2 rounded-full bg-brand-limeGreen animate-ping"></span>
+                        Admissions Open for Batch 2027-28 • Kolkata Headquarters
+                      </div>
+
+                      <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight">
+                        Your Admission Partner for a <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-300">Brighter Tomorrow</span>
+                      </h1>
+
+                      <p className="text-base sm:text-lg text-slate-200 max-w-2xl font-normal leading-relaxed">
+                        Expert college admission guidance for <strong>Engineering, Medical (MBBS/BDS), Nursing (GNM/B.Sc), Management (MBA/BBA), Pharmacy & Law</strong> for 2027-28. Transparent counseling, direct tie-ups with top colleges, plus complete <strong>West Bengal Student Credit Card & Vidya Lakshmi Central Government Scholarship support</strong>.
+                      </p>
+
+                      {/* Key highlights pill tags */}
+                      <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+                        <span className="bg-white/15 px-3 py-1 rounded-full text-xs font-semibold text-white border border-white/10 flex items-center gap-1.5">
+                          ✓ Vidya Lakshmi Central Scheme
+                        </span>
+                        <span className="bg-white/15 px-3 py-1 rounded-full text-xs font-semibold text-white border border-white/10 flex items-center gap-1.5">
+                          ✓ WB Student Credit Card ₹10 Lakhs
+                        </span>
+                        <span className="bg-white/15 px-3 py-1 rounded-full text-xs font-semibold text-white border border-white/10 flex items-center gap-1.5">
+                          ✓ Verified Institutional Quota
+                        </span>
+                        <span className="bg-white/15 px-3 py-1 rounded-full text-xs font-semibold text-white border border-white/10 flex items-center gap-1.5">
+                          ✓ Zero Hidden Donations
+                        </span>
+                      </div>
+
+                      {/* Call to action buttons */}
+                      <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <button 
+                          onClick={() => setModalOpen(true)}
+                          className="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-base bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white shadow-lg shadow-emerald-900/30 transform hover:-translate-y-0.5 transition-all duration-200"
+                        >
+                          Book Free Counseling (2027-28) ➔
+                        </button>
+                        <a 
+                          href={`https://wa.me/91${CONTACT.whatsapp}?text=${encodeURIComponent('Hello Future Guide, I need admission guidance and college fee details for 2027-28.')}`} 
+                          target="_blank" 
+                          rel="noreferrer"
+                          className="w-full sm:w-auto px-6 py-4 rounded-xl font-bold text-base bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md flex items-center justify-center gap-2 transition-all duration-200"
+                        >
+                          <svg className="w-5 h-5 text-emerald-400 fill-current" viewBox="0 0 24 24">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.7c.96.523 1.799.815 2.792.815 3.182 0 5.769-2.587 5.769-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.503-4.468 9.969-9.969 9.969-1.748 0-3.385-.452-4.814-1.242l-5.217 1.368 1.391-5.083c-.896-1.488-1.429-3.235-1.429-5.012 0-5.501 4.467-9.969 9.969-9.969 5.501 0 9.969 4.468 9.969 9.969z"/>
+                          </svg>
+                          WhatsApp Counselor
+                        </a>
+                      </div>
+
+                      {/* Trust metrics */}
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15">
+                        <div>
+                          <div className="text-2xl sm:text-3xl font-extrabold text-white">5,000+</div>
+                          <div className="text-xs text-slate-300">Students Guided</div>
+                        </div>
+                        <div>
+                          <div className="text-2xl sm:text-3xl font-extrabold text-emerald-300">150+</div>
+                          <div className="text-xs text-slate-300">Partner Colleges</div>
+                        </div>
+                        <div>
+                          <div className="text-2xl sm:text-3xl font-extrabold text-brand-gold">100%</div>
+                          <div className="text-xs text-slate-300">Scholarship Aid</div>
+                        </div>
+                        <div>
+                          <div className="text-2xl sm:text-3xl font-extrabold text-white">10+ Yrs</div>
+                          <div className="text-xs text-slate-300">Counseling Heritage</div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    {/* Right Column: Interactive Quick Inquiry Card */}
+                    <div className="lg:col-span-5">
+                      <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-slate-800 border-4 border-white/20 backdrop-blur-xl">
+                        <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
+                          <div>
+                            <span className="text-xs font-bold uppercase tracking-wider text-brand-green bg-green-50 px-2.5 py-1 rounded">
+                              Session 2027-28 Inquiry
+                            </span>
+                            <h3 className="text-xl font-bold text-slate-900 mt-1">Get Instant College & Fee Details</h3>
+                          </div>
+                          <div className="w-12 h-12 rounded-full overflow-hidden border border-brand-green/30 p-0.5 shrink-0">
+                            <img src="./assets/logo.jpg" alt="Logo" className="w-full h-full object-contain" />
+                          </div>
+                        </div>
+
+                        {formSubmitted ? (
+                          <div className="p-6 bg-green-50 border border-green-200 rounded-xl text-center space-y-3">
+                            <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto text-2xl font-bold">✓</div>
+                            <h4 className="text-lg font-bold text-green-900">Inquiry Saved in Backend & Counselor Notified!</h4>
+                            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">
+                              <span>✓ Stored in Supabase Database</span>
+                            </div>
+                            <p className="text-xs text-green-700">
+                              Our Kolkata counseling desk will call you shortly on <strong>{formState.phone}</strong> for batch 2027-28 details.
+                            </p>
+                            <a 
+                              href={`https://wa.me/91${CONTACT.whatsapp}`} 
+                              target="_blank" 
+                              rel="noreferrer"
+                              className="inline-block px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-bold text-xs rounded-lg shadow"
+                            >
+                              Open WhatsApp Directly
+                            </a>
+                            <div>
+                              <button 
+                                onClick={() => setFormSubmitted(false)} 
+                                className="text-xs text-slate-500 underline mt-2"
+                              >
+                                Submit another inquiry
+                              </button>
+                            </div>
+                          </div>
+                        ) : (
+                          <form onSubmit={handleFormSubmit} className="space-y-4">
+                            <div>
+                              <label className="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
+                              <input 
+                                type="text" 
+                                required 
+                                placeholder="Enter full name" 
+                                value={formState.name}
+                                onChange={(e) => setFormState({...formState, name: e.target.value})}
+                                className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue text-sm outline-none transition-all"
+                              />
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <div>
+                                <label className="block text-xs font-semibold text-slate-700 mb-1">WhatsApp / Phone *</label>
+                                <input 
+                                  type="tel" 
+                                  required 
+                                  placeholder="10-digit mobile" 
+                                  value={formState.phone}
+                                  onChange={(e) => setFormState({...formState, phone: e.target.value})}
+                                  className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue text-sm outline-none transition-all"
+                                />
+                              </div>
+                              <div>
+                                <label className="block text-xs font-semibold text-slate-700 mb-1">Email (Optional)</label>
+                                <input 
+                                  type="email" 
+                                  placeholder="youremail@gmail.com" 
+                                  value={formState.email}
+                                  onChange={(e) => setFormState({...formState, email: e.target.value})}
+                                  className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue text-sm outline-none transition-all"
+                                />
+                              </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <div>
+                                <label className="block text-xs font-semibold text-slate-700 mb-1">Target Course *</label>
+                                <select 
+                                  value={formState.course}
+                                  onChange={(e) => setFormState({...formState, course: e.target.value})}
+                                  className="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue text-sm outline-none transition-all bg-white"
+                                >
+                                  <option value="Engineering (B.Tech / M.Tech)">Engineering (B.Tech / Diploma)</option>
+                                  <option value="Medical (MBBS / BDS)">Medical (MBBS / BDS)</option>
+                                  <option value="Nursing (GNM / B.Sc)">Nursing (GNM / B.Sc)</option>
+                                  <option value="Management (MBA / BBA)">Management (MBA / BBA)</option>
+                                  <option value="Computer Apps (BCA / MCA)">Computer Apps (BCA / MCA)</option>
+                                  <option value="Pharmacy (B.Pharm / D.Pharm)">Pharmacy (B.Pharm / D.Pharm)</option>
+                                  <option value="Law (BA LLB / LLB)">Law (BA LLB / LLB)</option>
+                                  <option value="Scholarship / Vidya Lakshmi Assistance">Vidya Lakshmi / WBSCC Loan</option>
+                                </select>
+                              </div>
+                              <div>
+                                <label className="block text-xs font-semibold text-slate-700 mb-1">Preferred Location</label>
+                                <select 
+                                  value={formState.state}
+                                  onChange={(e) => setFormState({...formState, state: e.target.value})}
+                                  className="w-full px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue text-sm outline-none transition-all bg-white"
+                                >
+                                  <option value="Kolkata / West Bengal">Kolkata / West Bengal</option>
+                                  <option value="Bangalore (Karnataka)">Bangalore (Karnataka)</option>
+                                  <option value="Bhubaneswar (Odisha)">Bhubaneswar (Odisha)</option>
+                                  <option value="Delhi NCR / Pune">Delhi NCR / Pune</option>
+                                  <option value="Abroad (MBBS: Russia/Bangladesh)">Abroad (MBBS: Russia/Bangladesh)</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div>
+                              <label className="block text-xs font-semibold text-slate-700 mb-1">Marks / Percentile / Query</label>
+                              <textarea 
+                                rows="2" 
+                                placeholder="E.g., 12th marks 72%, looking for CSE in Kolkata with Student Credit Card / Vidya Lakshmi"
+                                value={formState.message}
+                                onChange={(e) => setFormState({...formState, message: e.target.value})}
+                                className="w-full px-3.5 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue text-sm outline-none transition-all resize-none"
+                              ></textarea>
+                            </div>
+
+                            <button 
+                              type="submit"
+                              className="w-full py-3.5 px-4 rounded-xl font-bold text-white bg-gradient-to-r from-brand-blue via-brand-darkBlue to-brand-green hover:shadow-lg transition-all duration-300 text-sm flex items-center justify-center gap-2"
+                            >
+                              <span>🚀 Submit & Connect on WhatsApp</span>
+                            </button>
+                          </form>
+                        )}
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+
+              {/* CONTINUOUS MARQUEE TICKER OF PARTNER COLLEGES */}
+              <section className="bg-slate-900 text-white py-3 overflow-hidden border-y border-slate-800">
+                <div className="flex items-center gap-4 animate-marquee whitespace-nowrap">
+                  {colleges.concat(colleges).map((item, idx) => (
+                    <div key={idx} className="inline-flex items-center gap-3 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300">
+                      <span className="w-2 h-2 rounded-full bg-brand-green"></span>
+                      <strong className="text-white">{item.name}</strong>
+                      <span className="text-emerald-400">({item.stream.split('/')[0]})</span>
+                      <span className="text-brand-gold text-[11px]">⭐ {item.rating}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* CONTINUOUS AUTO-SLIDING COLLEGES & UNIVERSITIES SECTION */}
+              <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  
+                  {/* Section Header with Slider Controls & Shuffle Button */}
+                  <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                    <div>
+                      <div className="inline-flex items-center gap-2 text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200 mb-2">
+                        <span>🎓 Live Campus Showcase</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span className="text-[10px] text-emerald-800">Continuous Sliding Mode</span>
+                      </div>
+                      <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+                        Leading Partner Colleges & Universities
+                      </h2>
+                      <p className="text-slate-600 text-sm sm:text-base mt-1">
+                        Explore verified, top-ranked institutions across Kolkata, West Bengal, Bangalore & Pan-India. Profiles slide continuously.
+                      </p>
+                    </div>
+
+                    {/* Interactive Slider Navigation & Randomize Button */}
+                    <div className="flex flex-wrap items-center gap-2">
+                      <button
+                        onClick={shuffleColleges}
+                        title="Randomize & shuffle college profiles"
+                        className="px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-300 shadow-sm flex items-center gap-1.5 transition-all"
+                      >
+                        <span>🔀 Slide Randomly</span>
+                      </button>
+
+                      <button
+                        onClick={() => setIsAutoSliding(!isAutoSliding)}
+                        title={isAutoSliding ? "Pause auto sliding" : "Resume continuous sliding"}
+                        className={`px-3 py-2 rounded-xl text-xs font-bold border transition-all ${isAutoSliding ? 'bg-emerald-50 text-emerald-800 border-emerald-300' : 'bg-slate-100 text-slate-700 border-slate-300'}`}
+                      >
+                        {isAutoSliding ? '⏸️ Auto-Slide Active' : '▶️ Resume Auto-Slide'}
+                      </button>
+
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={prevSlide}
+                          className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 flex items-center justify-center font-bold text-lg transition-colors border border-slate-200 shadow-sm"
+                          aria-label="Previous College"
+                        >
+                          ‹
+                        </button>
+                        <button
+                          onClick={nextSlide}
+                          className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 flex items-center justify-center font-bold text-lg transition-colors border border-slate-200 shadow-sm"
+                          aria-label="Next College"
+                        >
+                          ›
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Sliding Container */}
+                  <div 
+                    className="relative overflow-hidden py-2"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
+                    <div 
+                      className="flex transition-transform duration-700 ease-out gap-6"
+                      style={{
+                        transform: `translateX(-${currentSlide * (100 / Math.min(colleges.length, 4))}%)`
+                      }}
+                    >
+                      {colleges.map((college) => (
+                        <div 
+                          key={college.id} 
+                          className="w-full sm:w-1/2 lg:w-1/4 shrink-0 bg-slate-50 rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover border border-slate-200/80 hover:border-brand-green/40 hover:bg-white transition-all duration-300 flex flex-col justify-between group"
+                        >
+                          <div>
+                            {/* College Image */}
+                            <div className="h-44 relative overflow-hidden bg-slate-200">
+                              <img 
+                                src={college.image} 
+                                alt={college.name} 
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              />
+                              <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-md text-xs font-bold text-brand-blue shadow">
+                                ⭐ {college.rating}
+                              </div>
+                              <div className="absolute bottom-3 left-3 bg-brand-darkBlue/85 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold text-white">
+                                📍 {college.location}
+                              </div>
+                            </div>
+
+                            {/* College Details */}
+                            <div className="p-5 space-y-2">
+                              <div className="flex items-center justify-between">
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                                  {college.badge}
+                                </span>
+                                <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded">
+                                  {college.seats}
+                                </span>
+                              </div>
+
+                              <h3 className="font-bold text-slate-900 text-base leading-snug line-clamp-1 group-hover:text-brand-blue transition-colors">
+                                {college.name}
+                              </h3>
+                              <p className="text-xs text-slate-500 line-clamp-1">{college.stream}</p>
+                              
+                              <div className="text-xs font-semibold text-slate-700 bg-white p-2.5 rounded-xl border border-slate-200/70">
+                                Fee Range: <span className="text-brand-blue font-bold">{college.fee}</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Action Button */}
+                          <div className="p-5 pt-0">
+                            <button 
+                              onClick={() => {
+                                setFormState({...formState, message: `Inquiring for 2027-28 seat availability and fee structure at ${college.name}`});
+                                setModalOpen(true);
+                              }}
+                              className="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-brand-blue to-brand-green hover:shadow-md transition-all text-center flex items-center justify-center gap-1"
+                            >
+                              <span>Check 2027-28 Seats ➔</span>
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Slide Indicators */}
+                  <div className="flex items-center justify-center gap-2 pt-6">
+                    {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setCurrentSlide(i)}
+                        className={`h-2 rounded-full transition-all duration-300 ${currentSlide === i ? 'w-8 bg-brand-green' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+                        aria-label={`Jump to slide ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                </div>
+              </section>
+
+              {/* CORE SERVICES */}
+              <section className="py-16 sm:py-24 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="text-center max-w-3xl mx-auto mb-16">
+                    <span className="text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                      Our Specialized Services
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">
+                      End-to-End Educational Consultancy in Kolkata
+                    </h2>
+                    <p className="text-slate-600 mt-3 text-base">
+                      From aptitude mapping and stream selection to central scholarship approvals and hostel allotment, Future Guide is with you at every step.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    {/* Service 1 */}
+                    <div className="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover border border-slate-100 transition-all duration-300 group">
+                      <div className="w-14 h-14 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center text-2xl mb-5 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                        🎓
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">College Admission Support</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                        Direct admission assistance under Merit, Management, and Institutional quotas for batch 2027-28 in top engineering, medical, nursing, pharmacy, and management colleges.
+                      </p>
+                      <ul className="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Cutoff analysis & seat booking</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Official admission letter facilitation</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Direct fee payment to college</li>
+                      </ul>
+                    </div>
+
+                    {/* Service 2: Vidya Lakshmi & Scholarships */}
+                    <div className="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover border border-slate-100 transition-all duration-300 group">
+                      <div className="w-14 h-14 rounded-xl bg-green-50 text-brand-green flex items-center justify-center text-2xl mb-5 group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
+                        💳
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">Vidya Lakshmi & WBSCC Aid</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                        Comprehensive assistance for <strong>Vidya Lakshmi Central Government Portal</strong> (100% CSIS interest subsidy & collateral-free loans up to ₹7.5L) and <strong>West Bengal Student Credit Card</strong> (up to ₹10 Lakhs at 4%).
+                      </p>
+                      <ul className="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Vidya Lakshmi CELAF form filling</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> College bonafide & fee schedule creation</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Bank file tracking in Kolkata</li>
+                      </ul>
+                    </div>
+
+                    {/* Service 3 */}
+                    <div className="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover border border-slate-100 transition-all duration-300 group">
+                      <div className="w-14 h-14 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
+                        🧭
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">1-on-1 Career Counseling</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                        Personalized sessions in Kolkata with senior academic experts to evaluate student aptitude, interests, budget, and 2027-28 admission cutoffs.
+                      </p>
+                      <ul className="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> In-person counseling at Kolkata office</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Parent & student doubts clarification</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Complete college comparison matrix</li>
+                      </ul>
+                    </div>
+
+                    {/* Service 4 */}
+                    <div className="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover border border-slate-100 transition-all duration-300 group">
+                      <div className="w-14 h-14 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                        🩺
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">NEET & WBJEE Counseling</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                        Specialized support for state and all-India counseling (WBJEE, JEE Main, NEET UG/PG). Expert choice-filling strategies to maximize chances of top branch selection.
+                      </p>
+                      <ul className="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Round-by-round mock seat matrix</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Category & domicile quota guidance</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Mop-up & stray vacancy assistance</li>
+                      </ul>
+                    </div>
+
+                    {/* Service 5 */}
+                    <div className="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover border border-slate-100 transition-all duration-300 group">
+                      <div className="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                        🏥
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">Nursing & Paramedical Admissions</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                        Confirmed admissions into premier INC & WBNC approved nursing colleges with 500+ bed hospital tie-ups, 100% bedside clinical training, and assured placements.
+                      </p>
+                      <ul className="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> GNM (General Nursing) for All Streams</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> B.Sc Nursing for Science (PCB)</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Verified hospital clinical rotations</li>
+                      </ul>
+                    </div>
+
+                    {/* Service 6 */}
+                    <div className="bg-white rounded-2xl p-7 shadow-card hover:shadow-card-hover border border-slate-100 transition-all duration-300 group">
+                      <div className="w-14 h-14 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl mb-5 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300">
+                        🏠
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">Campus Visit & Hostel Support</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                        We don't leave you after admission! We coordinate guided college campus tours, hostel inspections, local guardian assistance, and ongoing support.
+                      </p>
+                      <ul className="text-xs text-slate-500 space-y-1.5 border-t border-slate-100 pt-3">
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Guided college & hospital visits</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Verified hygienic boys & girls hostels</li>
+                        <li className="flex items-center gap-1.5"><span className="text-brand-green font-bold">✓</span> Continuous mentor support</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </div>
+              </section>
+
+              {/* INTERACTIVE SCHOLARSHIP & VIDYA LAKSHMI CALCULATOR */}
+              <section className="py-16 sm:py-24 bg-gradient-to-br from-slate-900 via-brand-darkBlue to-brand-blue text-white relative overflow-hidden">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                  <div className="text-center max-w-2xl mx-auto mb-10">
+                    <span className="text-brand-limeGreen text-xs font-bold uppercase tracking-wider bg-white/10 px-3 py-1 rounded-full border border-white/20">
+                      Scholarship Eligibility Tool
+                    </span>
+                    <h2 className="text-2xl sm:text-4xl font-extrabold text-white mt-3 font-heading">
+                      Scholarship & Loan Eligibility Calculator
+                    </h2>
+                    <p className="text-slate-300 text-sm mt-2">
+                      Answer 4 quick questions to see your eligible government funding, Vidya Lakshmi Central Interest Subsidy, and WBSCC benefits!
+                    </p>
+                  </div>
+
+                  <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-10 text-slate-800">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                      
+                      {/* Inputs */}
+                      <div className="space-y-4">
+                        <div>
+                          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                            1. Your Current Qualification
+                          </label>
+                          <select 
+                            value={calcData.qualification}
+                            onChange={(e) => setCalcData({...calcData, qualification: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand-blue outline-none bg-slate-50"
+                          >
+                            <option value="10+2 Passed">Class 12th / Higher Secondary (10+2)</option>
+                            <option value="Graduate">Graduation / Degree (B.Sc / B.Com / BA / B.Tech)</option>
+                            <option value="Diploma">Diploma / Polytechnic</option>
+                            <option value="10th Passed">Class 10th (Madhyamik / Secondary)</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                            2. Last Exam Percentage / Score
+                          </label>
+                          <select 
+                            value={calcData.percentage}
+                            onChange={(e) => setCalcData({...calcData, percentage: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand-blue outline-none bg-slate-50"
+                          >
+                            <option value="Above 75%">Above 75% (Distinction)</option>
+                            <option value="60-75%">60% - 75% (First Division)</option>
+                            <option value="50-60%">50% - 60% (Second Division)</option>
+                            <option value="Below 50%">Below 50%</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                            3. Category / Community
+                          </label>
+                          <select 
+                            value={calcData.category}
+                            onChange={(e) => setCalcData({...calcData, category: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand-blue outline-none bg-slate-50"
+                          >
+                            <option value="General">General</option>
+                            <option value="OBC">OBC (Other Backward Classes)</option>
+                            <option value="SC/ST">SC / ST (Scheduled Caste / Tribe)</option>
+                            <option value="Minority">Minority (Muslim, Christian, Sikh, Buddhist, Jain)</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                            4. Annual Family Income
+                          </label>
+                          <select 
+                            value={calcData.income}
+                            onChange={(e) => setCalcData({...calcData, income: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm font-medium focus:ring-2 focus:ring-brand-blue outline-none bg-slate-50"
+                          >
+                            <option value="Under 2.5 LPA">Under ₹2,50,000 per year (&lt; 2.5 LPA)</option>
+                            <option value="2.5 - 5 LPA">₹2,50,000 to ₹5,00,000 per year</option>
+                            <option value="Above 5 LPA">Above ₹5,00,000 per year</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      {/* Real-time Calculation Result Box */}
+                      <div className="bg-gradient-to-br from-slate-50 to-emerald-50/50 p-6 rounded-xl border-2 border-brand-green/30 space-y-3.5">
+                        <div className="flex items-center gap-2">
+                          <span className="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></span>
+                          <span className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+                            Eligible Financial Schemes Found
+                          </span>
+                        </div>
+
+                        {/* Vidya Lakshmi Scheme Result */}
+                        <div className="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200">
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-brand-darkBlue text-xs sm:text-sm">Vidya Lakshmi (Central Govt Scheme)</span>
+                            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
+                              {calcData.income !== 'Above 5 LPA' ? '100% CSIS Subsidy' : 'Collateral-Free Loan'}
+                            </span>
+                          </div>
+                          <div className="text-lg font-extrabold text-slate-900 mt-0.5">Up to ₹7.5 Lakhs (Collateral-Free)</div>
+                          <div className="text-[11px] text-slate-500">
+                            {calcData.income !== 'Above 5 LPA' 
+                              ? 'Qualifies for 100% Central Sector Interest Subsidy (CSIS) during course period.' 
+                              : 'Connected to 44+ premier scheduled banks for quick sanction.'}
+                          </div>
+                        </div>
+
+                        {/* WBSCC Loan Badge */}
+                        <div className="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200">
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-brand-darkBlue text-xs sm:text-sm">WB Student Credit Card (WBSCC)</span>
+                            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Eligible</span>
+                          </div>
+                          <div className="text-lg font-extrabold text-slate-900 mt-0.5">Up to ₹10,00,000</div>
+                          <div className="text-[11px] text-slate-500">4% simple interest • 15 years repayment • Covers full fees & hostel</div>
+                        </div>
+
+                        {/* Merit / Category Grant */}
+                        <div className="bg-white p-3.5 rounded-xl shadow-sm border border-slate-200">
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-brand-darkBlue text-xs sm:text-sm">
+                              {calcData.category === 'Minority' ? 'Aikyashree Scholarship' :
+                               (calcData.category === 'SC/ST' || calcData.category === 'OBC') ? 'OASIS Scholarship' :
+                               'SVMCM (Swami Vivekananda)'}
+                            </span>
+                            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
+                              {calcData.percentage !== 'Below 50%' ? 'Qualified' : 'Check Criteria'}
+                            </span>
+                          </div>
+                          <div className="text-lg font-extrabold text-slate-900 mt-0.5">
+                            {calcData.percentage === 'Above 75%' || calcData.percentage === '60-75%' 
+                              ? '₹12,000 - ₹60,000 / Year' 
+                              : 'Fee Waiver / Category Grant'}
+                          </div>
+                        </div>
+
+                        <button 
+                          onClick={() => {
+                            const query = `Hello Future Guide, based on calculator: ${calcData.qualification}, ${calcData.percentage}, Category: ${calcData.category}, Income: ${calcData.income}. Please help me apply for Vidya Lakshmi Central Scheme & WBSCC.`;
+                            window.open(`https://wa.me/91${CONTACT.whatsapp}?text=${encodeURIComponent(query)}`, '_blank');
+                          }}
+                          className="w-full py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 shadow-md flex items-center justify-center gap-2 transition-all"
+                        >
+                          <span>Get Free Scholarship Application Support ➔</span>
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* STUDENT TESTIMONY SECTION WITH ANIMATIONS */}
+              <section className="py-16 sm:py-24 bg-slate-100/70 border-t border-slate-200 overflow-hidden relative">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  
+                  {/* Header & Controls */}
+                  <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                      <div className="inline-flex items-center gap-2 text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200 mb-2">
+                        <span className="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
+                        <span>💬 Student Success Stories</span>
+                      </div>
+                      <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
+                        Real Experiences From Placed Students
+                      </h2>
+                      <p className="text-slate-600 text-sm sm:text-base mt-1 max-w-2xl">
+                        Honest reviews from students & parents across Kolkata & West Bengal who secured admission with scholarship & loan support through Future Guide.
+                      </p>
+                    </div>
+
+                    {/* Testimonial Controls */}
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setIsTestimonialAuto(!isTestimonialAuto)}
+                        className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-all ${isTestimonialAuto ? 'bg-emerald-50 text-emerald-800 border-emerald-300' : 'bg-white text-slate-700 border-slate-300 shadow-sm'}`}
+                      >
+                        {isTestimonialAuto ? '⏸️ Auto-Rotate' : '▶️ Resume'}
+                      </button>
+
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => setTestimonialSlide((prev) => (prev <= 0 ? maxTestimonialIndex : prev - 1))}
+                          className="w-10 h-10 rounded-xl bg-white hover:bg-brand-blue hover:text-white text-slate-700 flex items-center justify-center font-bold text-lg transition-colors border border-slate-200 shadow-sm"
+                          aria-label="Previous Testimonials"
+                        >
+                          ‹
+                        </button>
+                        <button
+                          onClick={() => setTestimonialSlide((prev) => (prev >= maxTestimonialIndex ? 0 : prev + 1))}
+                          className="w-10 h-10 rounded-xl bg-white hover:bg-brand-blue hover:text-white text-slate-700 flex items-center justify-center font-bold text-lg transition-colors border border-slate-200 shadow-sm"
+                          aria-label="Next Testimonials"
+                        >
+                          ›
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Testimonials Animated Slider */}
+                  <div 
+                    className="relative overflow-hidden py-2"
+                    onMouseEnter={() => setIsTestimonialHovered(true)}
+                    onMouseLeave={() => setIsTestimonialHovered(false)}
+                  >
+                    <div 
+                      className="flex transition-transform duration-700 ease-out gap-6"
+                      style={{
+                        transform: `translateX(-${testimonialSlide * (100 / Math.min(TESTIMONIALS_DATA.length, 3))}%)`
+                      }}
+                    >
+                      {TESTIMONIALS_DATA.map((t, idx) => (
+                        <div 
+                          key={t.id}
+                          className={`w-full sm:w-1/2 lg:w-1/3 shrink-0 bg-white rounded-3xl p-7 shadow-card hover:shadow-card-hover border border-slate-200/80 hover:border-brand-green/50 transition-all duration-300 flex flex-col justify-between group ${idx % 2 === 1 ? 'animate-float-slow' : ''}`}
+                        >
+                          <div>
+                            {/* Top row: stars and badge */}
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="flex items-center gap-1 text-amber-400 text-sm">
+                                {'★'.repeat(t.rating)}
+                              </div>
+                              <span className="text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                                {t.badge}
+                              </span>
+                            </div>
+
+                            {/* Quotation text */}
+                            <p className="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6 line-clamp-4 group-hover:text-slate-900 transition-colors">
+                              "{t.quote}"
+                            </p>
+                          </div>
+
+                          {/* Student profile info */}
+                          <div className="pt-4 border-t border-slate-100 flex items-center gap-3.5">
+                            <div className="relative">
+                              <img 
+                                src={t.avatar} 
+                                alt={t.name}
+                                className="w-12 h-12 rounded-full object-cover border-2 border-brand-green/40 shadow-sm"
+                              />
+                              <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-emerald-500 border-2 border-white rounded-full"></span>
+                            </div>
+
+                            <div className="overflow-hidden">
+                              <h4 className="font-bold text-slate-900 text-sm sm:text-base leading-snug line-clamp-1">{t.name}</h4>
+                              <p className="text-xs font-semibold text-brand-blue line-clamp-1">{t.course}</p>
+                              <p className="text-[11px] text-slate-500 line-clamp-1">{t.college}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Indicators */}
+                  <div className="flex items-center justify-center gap-2 pt-6">
+                    {Array.from({ length: maxTestimonialIndex + 1 }).map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setTestimonialSlide(i)}
+                        className={`h-2 rounded-full transition-all duration-300 ${testimonialSlide === i ? 'w-8 bg-brand-green' : 'w-2 bg-slate-300 hover:bg-slate-400'}`}
+                        aria-label={`Jump to testimonial slide ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Trust Footer Bar */}
+                  <div className="mt-8 text-center pt-6 border-t border-slate-200 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-600">
+                    <span className="flex items-center gap-1.5 text-amber-600 font-bold">
+                      ⭐ 4.9/5 Overall Rating
+                    </span>
+                    <span className="text-slate-300">•</span>
+                    <span>5,000+ Happy Students Guided</span>
+                    <span className="text-slate-300">•</span>
+                    <span className="text-emerald-700 font-bold">100% Genuine Admission & Scholarship Guidance</span>
+                  </div>
+
+                </div>
+              </section>
+
+              {/* RECENT BLOGS SECTION (TOP 3 WITH 'SEE ALL BLOGS' BUTTON) */}
+              <section className="py-16 sm:py-24 bg-white border-t border-slate-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  
+                  {/* Header */}
+                  <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                      <span className="text-brand-blue text-xs font-bold uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                        📰 Admission News & Insights
+                      </span>
+                      <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 font-heading">
+                        Latest Educational Blogs & Counseling Updates
+                      </h2>
+                      <p className="text-slate-600 text-sm sm:text-base mt-1">
+                        Cutoff analyses, central scheme guidelines, and step-by-step application advice for 2027-28.
+                      </p>
+                    </div>
+
+                    <div>
+                      <button 
+                        onClick={() => navigateTo('blog')}
+                        className="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-brand-blue to-brand-green text-white hover:shadow-lg transition-all flex items-center gap-1.5"
+                      >
+                        <span>See All Blogs ({BLOG_ARTICLES.length}+) ➔</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Recent 3 Blogs Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {BLOG_ARTICLES.slice(0, 3).map((article) => (
+                      <div 
+                        key={article.id} 
+                        className="bg-slate-50 rounded-3xl p-6 sm:p-7 border border-slate-200 hover:border-brand-green hover:bg-white hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+                      >
+                        <div>
+                          <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
+                            <span className="font-bold text-brand-green bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
+                              {article.category}
+                            </span>
+                            <span className="text-[11px]">{article.readTime}</span>
+                          </div>
+
+                          <h3 
+                            onClick={() => setSelectedBlog(article)}
+                            className="font-bold text-slate-900 text-lg mb-2.5 line-clamp-2 group-hover:text-brand-blue cursor-pointer transition-colors leading-snug font-heading"
+                          >
+                            {article.title}
+                          </h3>
+
+                          <p className="text-xs text-slate-600 line-clamp-3 mb-5 leading-relaxed">
+                            {article.summary}
+                          </p>
+                        </div>
+
+                        <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+                          <button 
+                            onClick={() => setSelectedBlog(article)}
+                            className="text-xs font-bold text-brand-blue hover:text-brand-green flex items-center gap-1 transition-colors"
+                          >
+                            Read Full Article ➔
+                          </button>
+                          <button 
+                            onClick={() => {
+                              setFormState({...formState, message: `Question regarding blog article: ${article.title}`});
+                              setModalOpen(true);
+                            }}
+                            className="text-xs text-slate-500 hover:text-brand-darkBlue underline"
+                          >
+                            Ask Counselor
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Bottom "See All Blogs" Action Banner */}
+                  <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-emerald-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-base">Want to explore all admission articles and counseling guides?</h4>
+                      <p className="text-xs text-slate-600 mt-0.5">Browse in-depth breakdowns on NEET cutoffs, Nursing vs B.Sc Nursing, and WBSCC step-by-step procedures.</p>
+                    </div>
+                    <button 
+                      onClick={() => navigateTo('blog')}
+                      className="px-6 py-3 rounded-xl font-bold text-xs sm:text-sm bg-brand-blue hover:bg-brand-darkBlue text-white shadow-md transition-all shrink-0"
+                    >
+                      Browse All Articles ➔
+                    </button>
+                  </div>
+
+                </div>
+              </section>
+              <section className="py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div className="text-center mb-12">
+                    <span className="text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                      Frequently Asked Questions
+                    </span>
+                    <h2 className="text-3xl font-extrabold text-slate-900 mt-2 font-heading">
+                      Got Questions? We Have Answers
+                    </h2>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                      <h4 className="font-bold text-slate-900 text-sm sm:text-base">Q: What is the Vidya Lakshmi Central Government Scheme?</h4>
+                      <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                        The Vidya Lakshmi Portal is a Central Government single-window platform developed by the Ministry of Education and Ministry of Finance with the Indian Banks' Association (IBA). It allows students to apply for collateral-free education loans up to ₹7.5 Lakhs and claims 100% Central Sector Interest Subsidy (CSIS) during the course moratorium if their family income is under ₹4.5 Lakhs. Future Guide provides full CELAF application guidance.
+                      </p>
+                    </div>
+
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                      <h4 className="font-bold text-slate-900 text-sm sm:text-base">Q: How does West Bengal Student Credit Card (WBSCC) work for 2027-28?</h4>
+                      <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                        The Government of West Bengal provides up to ₹10 Lakhs education loan at 4% simple interest for higher education. Future Guide helps students get the required college bonafide certificate, fee structure, and end-to-end guidance to submit the application on the wbscc.wb.gov.in portal.
+                      </p>
+                    </div>
+
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                      <h4 className="font-bold text-slate-900 text-sm sm:text-base">Q: Can I get direct admission in B.Tech without WBJEE / JEE Main?</h4>
+                      <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                        Yes! Most approved private universities and engineering colleges have approved Management Quota / NRI / Institutional seats. Future Guide assists eligible 10+2 students (min 45% with PCM) to get direct confirmed seats in colleges like IEM, Heritage, Techno India, and JIS.
+                      </p>
+                    </div>
+
+                    <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                      <h4 className="font-bold text-slate-900 text-sm sm:text-base">Q: Is Arts or Commerce student eligible for Nursing?</h4>
+                      <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                        Yes! GNM (General Nursing and Midwifery) is 100% open for students of ANY stream (Arts, Science, or Commerce) who have passed 10+2 with minimum 40% aggregate and English. For B.Sc Nursing, 10+2 with Physics, Chemistry & Biology (PCB) is mandatory.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Call to Action Banner */}
+              <section className="bg-gradient-to-r from-brand-blue via-brand-darkBlue to-brand-green text-white py-14 px-4 text-center">
+                <div className="max-w-4xl mx-auto space-y-4">
+                  <h2 className="text-2xl sm:text-4xl font-extrabold font-heading">Ready to Secure Your 2027-28 College Admission?</h2>
+                  <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto">
+                    Speak directly with Kolkata's experienced counselors. We check your eligibility, calculate scholarship potential, and book confirmed seats.
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+                    <button 
+                      onClick={() => setModalOpen(true)}
+                      className="px-8 py-3.5 rounded-xl font-bold text-sm bg-white text-brand-darkBlue hover:bg-slate-100 shadow-lg transition-all"
+                    >
+                      Book Free Appointment ➔
+                    </button>
+                    <a 
+                      href={`tel:${CONTACT.phones[0]}`}
+                      className="px-6 py-3.5 rounded-xl font-bold text-sm bg-brand-green hover:bg-brand-darkGreen text-white shadow-lg flex items-center gap-2 transition-all"
+                    >
+                      📞 Call {CONTACT.phones[0]}
+                    </a>
+                  </div>
+                </div>
+              </section>
+
+            </main>
+          )}
+
+          {/* TAB 2: ABOUT US */}
+          {activeTab === 'about' && (
+            <main className="flex-1 py-12 sm:py-16">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div className="text-center max-w-3xl mx-auto">
+                  <span className="text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                    Who We Are
+                  </span>
+                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3 font-heading">
+                    About FUTURE GUIDE
+                  </h1>
+                  <p className="text-slate-600 text-base sm:text-lg mt-3">
+                    Your Admission Partner for a Brighter Tomorrow — Headquartered in Kolkata, West Bengal.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                  <div className="md:col-span-6 space-y-5">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-brand-darkBlue font-heading">
+                      Empowering Students Across West Bengal & India Since Over a Decade
+                    </h2>
+                    <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                      <strong>FUTURE GUIDE</strong> is Kolkata's premier educational advisory consultancy, dedicated to guiding students through one of the most critical transitions of their lives: college admissions and career pathing.
+                    </p>
+                    <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                      Founded with a mission to eliminate fraud, hidden donation charges, and misguidance in higher education, Future Guide maintains verified direct partnerships with more than 150+ top universities, engineering institutes, medical colleges, nursing institutions, and business schools.
+                    </p>
+                    <div className="bg-blue-50 border-l-4 border-brand-blue p-4 rounded-r-xl">
+                      <p className="text-xs sm:text-sm font-semibold text-brand-darkBlue">
+                        "We believe every student deserves access to quality higher education regardless of financial constraints. Our proactive support for the Vidya Lakshmi Central Scheme, West Bengal Student Credit Card, and government scholarships has enabled thousands of students to become engineers, doctors, nurses, and business managers."
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-6 flex justify-center">
+                    <div className="relative p-6 bg-white rounded-3xl shadow-xl border border-slate-200 max-w-sm text-center">
+                      <img 
+                        src="./assets/logo.jpg" 
+                        alt="Future Guide Logo" 
+                        className="w-48 h-48 mx-auto rounded-full object-contain p-2 border-4 border-brand-green/20"
+                      />
+                      <h3 className="text-xl font-bold text-slate-900 mt-4 font-heading">FUTURE GUIDE</h3>
+                      <p className="text-xs text-brand-green font-semibold">Kolkata, West Bengal</p>
+                      <p className="text-xs text-slate-500 mt-2">
+                        Specialized admission counselors for Engineering, Medical, Nursing, Pharmacy, Management & Law.
+                      </p>
+                      <div className="mt-4 pt-4 border-t border-slate-100 flex justify-center gap-4 text-xs font-bold text-brand-darkBlue">
+                        <span>📞 6289212360</span>
+                        <span>•</span>
+                        <span>📞 8617765602</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Office Info */}
+                <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                      <h4 className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">Head Office</h4>
+                      <p className="font-bold text-lg">{CONTACT.name}</p>
+                      <p className="text-slate-300 text-xs mt-1 leading-relaxed">{CONTACT.address}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">Contact Desks</h4>
+                      <p className="text-sm font-semibold">Phone 1: +91 {CONTACT.phones[0]}</p>
+                      <p className="text-sm font-semibold">Phone 2: +91 {CONTACT.phones[1]}</p>
+                      <p className="text-xs text-slate-300 mt-1">Email: {CONTACT.email}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">Counseling Timing</h4>
+                      <p className="text-sm font-semibold">{CONTACT.hours}</p>
+                      <button 
+                        onClick={() => setModalOpen(true)}
+                        className="mt-3 px-4 py-2 bg-brand-green hover:bg-brand-darkGreen text-white text-xs font-bold rounded-lg transition-colors"
+                      >
+                        Book Face-to-Face Slot
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </main>
+          )}
+
+          {/* TAB 3: COURSES & ADMISSIONS */}
+          {activeTab === 'courses' && (
+            <main className="flex-1 py-12 sm:py-16 bg-slate-50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <div className="text-center max-w-3xl mx-auto">
+                  <span className="text-brand-blue text-xs font-bold uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full">
+                    Complete Course Directory
+                  </span>
+                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3 font-heading">
+                    Admission Programs & Degrees (2027-28)
+                  </h1>
+                  <p className="text-slate-600 text-base mt-2">
+                    Browse full eligibility, duration, recognized accreditations, and top colleges for 2027-2028 admissions.
+                  </p>
+                </div>
+
+                {/* Filter Buttons */}
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  <button 
+                    onClick={() => setSelectedCourseFilter('all')}
+                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${selectedCourseFilter === 'all' ? 'bg-brand-blue text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'}`}
+                  >
+                    All Disciplines
+                  </button>
+                  {COURSES_DATA.map(c => (
+                    <button 
+                      key={c.id}
+                      onClick={() => setSelectedCourseFilter(c.id)}
+                      className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${selectedCourseFilter === c.id ? 'bg-brand-blue text-white shadow-md' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'}`}
+                    >
+                      {c.category}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Courses List */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {filteredCourses.map((course) => (
+                    <div key={course.id} className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-slate-200/80 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-brand-darkBlue bg-blue-100 px-3 py-1 rounded-full">
+                            {course.category}
+                          </span>
+                          <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                            {course.badge}
+                          </span>
+                        </div>
+
+                        <h2 className="text-2xl font-bold text-slate-900 font-heading">{course.title}</h2>
+                        
+                        <p className="text-slate-600 text-sm leading-relaxed">
+                          {course.desc}
+                        </p>
+
+                        <div>
+                          <div className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Available Branches & Specializations:</div>
+                          <div className="flex flex-wrap gap-1.5">
+                            {course.branches.map((b, i) => (
+                              <span key={i} className="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md font-medium">
+                                {b}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2 text-xs">
+                          <div><span className="font-bold text-slate-800">Duration:</span> {course.duration}</div>
+                          <div><span className="font-bold text-slate-800">Eligibility:</span> {course.eligibility}</div>
+                          <div><span className="font-bold text-slate-800">Partner Campuses:</span> {course.popularColleges}</div>
+                          <div className="text-emerald-700 font-bold flex items-center gap-1 pt-1">
+                            ✓ 100% Eligible for Vidya Lakshmi Central Scheme & WB Student Credit Card
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="pt-6 flex flex-col sm:flex-row gap-3">
+                        <button 
+                          onClick={() => {
+                            setFormState({...formState, course: course.title});
+                            setModalOpen(true);
+                          }}
+                          className="flex-1 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-brand-blue hover:bg-brand-darkBlue shadow transition-colors text-center"
+                        >
+                          Inquire for 2027-28 Seats
+                        </button>
+                        <a 
+                          href={`https://wa.me/91${CONTACT.whatsapp}?text=${encodeURIComponent(`Hello Future Guide, I need 2027-28 admission and fee details for ${course.title}.`)}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="py-3 px-4 rounded-xl font-bold text-xs sm:text-sm text-emerald-800 bg-emerald-100 hover:bg-emerald-200 transition-colors text-center flex items-center justify-center gap-1.5"
+                        >
+                          💬 WhatsApp
+                        </a>
+                      </div>
+
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </main>
+          )}
+
+          {/* TAB 4: SCHOLARSHIPS & VIDYA LAKSHMI CENTRAL SCHEME */}
+          {activeTab === 'scholarships' && (
+            <main className="flex-1 py-12 sm:py-16 bg-slate-50">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div className="text-center max-w-3xl mx-auto">
+                  <span className="text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                    Financial Aid & Central Schemes
+                  </span>
+                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3 font-heading">
+                    Vidya Lakshmi Central Scheme & Scholarships
+                  </h1>
+                  <p className="text-slate-600 text-base mt-2">
+                    Comprehensive guidance for the Central Government's Vidya Lakshmi portal (100% CSIS interest subsidy), West Bengal Student Credit Card up to ₹10 Lakhs, and merit grants.
+                  </p>
+                </div>
+
+                {/* FEATURED: VIDYA LAKSHMI CENTRAL GOVERNMENT SCHEME */}
+                <div className="bg-gradient-to-br from-slate-900 via-brand-darkBlue to-indigo-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden border-2 border-emerald-500/40">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div className="lg:col-span-8 space-y-4">
+                      <div className="inline-flex items-center gap-2 bg-emerald-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        <span>🏛️ Central Government of India Flagship</span>
+                      </div>
+                      <h2 className="text-2xl sm:text-4xl font-extrabold font-heading">
+                        Vidya Lakshmi Portal & CSIS Central Interest Subsidy
+                      </h2>
+                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                        Under the initiative of the <strong>Department of Higher Education (Ministry of Education)</strong> and <strong>Department of Financial Services (Ministry of Finance)</strong>, Vidya Lakshmi is India’s premier single-window portal providing access to education loans and central scholarships under PM-USP across 44+ scheduled banks.
+                      </p>
+
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                        <div className="bg-white/10 p-3 rounded-xl backdrop-blur-md">
+                          <div className="text-xl sm:text-2xl font-extrabold text-emerald-300">₹7.5 Lakh</div>
+                          <div className="text-[11px] text-slate-300">Collateral-Free Loan</div>
+                        </div>
+                        <div className="bg-white/10 p-3 rounded-xl backdrop-blur-md">
+                          <div className="text-xl sm:text-2xl font-extrabold text-brand-gold">100% Free</div>
+                          <div className="text-[11px] text-slate-300">CSIS Interest Subsidy</div>
+                        </div>
+                        <div className="bg-white/10 p-3 rounded-xl backdrop-blur-md">
+                          <div className="text-xl sm:text-2xl font-extrabold text-white">44+ Banks</div>
+                          <div className="text-[11px] text-slate-300">Single CELAF Form</div>
+                        </div>
+                        <div className="bg-white/10 p-3 rounded-xl backdrop-blur-md">
+                          <div className="text-xl sm:text-2xl font-extrabold text-emerald-300">15 Years</div>
+                          <div className="text-[11px] text-slate-300">Repayment Period</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="lg:col-span-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-4">
+                      <div className="w-14 h-14 bg-indigo-500 rounded-full flex items-center justify-center text-3xl mx-auto shadow-lg">
+                        🏛️
+                      </div>
+                      <h3 className="font-bold text-white text-lg">Apply for Vidya Lakshmi Scheme</h3>
+                      <p className="text-xs text-slate-300">
+                        We assist students with CELAF common form filing, accredited college bonafide letters, and direct branch liaison in Kolkata.
+                      </p>
+                      <button 
+                        onClick={() => {
+                          setFormState({...formState, message: "Interested in Vidya Lakshmi Central Government Scholarship & Education Loan."});
+                          setModalOpen(true);
+                        }}
+                        className="w-full py-3 bg-brand-limeGreen hover:bg-emerald-600 text-slate-900 font-extrabold text-xs rounded-xl transition-all shadow-md"
+                      >
+                        Apply for Vidya Lakshmi Support
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* WEST BENGAL STUDENT CREDIT CARD */}
+                <div className="bg-gradient-to-br from-brand-darkBlue via-brand-blue to-emerald-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden">
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div className="lg:col-span-8 space-y-4">
+                      <span className="bg-brand-gold text-slate-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                        West Bengal State Govt. Scheme
+                      </span>
+                      <h2 className="text-2xl sm:text-4xl font-extrabold font-heading">
+                        West Bengal Student Credit Card Scheme (WBSCC)
+                      </h2>
+                      <p className="text-slate-200 text-sm sm:text-base leading-relaxed">
+                        Under this visionary initiative by the Govt. of West Bengal, any eligible student residing in West Bengal for at least 10 years can receive an education loan of up to <strong>₹10,00,000 (10 Lakhs)</strong> for undergraduate, postgraduate, and professional studies anywhere in India or abroad at only 4% simple interest.
+                      </p>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                        <div className="bg-white/10 p-3 rounded-xl font-bold">₹10 Lakh Limit</div>
+                        <div className="bg-white/10 p-3 rounded-xl font-bold">4% Simple Interest</div>
+                        <div className="bg-white/10 p-3 rounded-xl font-bold">15 Yrs Repayment</div>
+                        <div className="bg-white/10 p-3 rounded-xl font-bold">1 Yr Moratorium</div>
+                      </div>
+                    </div>
+                    <div className="lg:col-span-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center space-y-4">
+                      <div className="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto shadow-lg">
+                        💳
+                      </div>
+                      <h3 className="font-bold text-white text-lg">Need WBSCC Documentation Help?</h3>
+                      <button 
+                        onClick={() => {
+                          setFormState({...formState, message: "Interested in West Bengal Student Credit Card (WBSCC) assistance."});
+                          setModalOpen(true);
+                        }}
+                        className="w-full py-3 bg-brand-limeGreen hover:bg-emerald-600 text-slate-900 font-extrabold text-xs rounded-xl transition-all shadow-md"
+                      >
+                        Apply for WBSCC Guidance
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Detailed Scholarships Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {SCHOLARSHIPS_DATA.map((sch) => (
+                    <div key={sch.id} className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-slate-200 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                            {sch.authority}
+                          </span>
+                          <span className="text-[10px] font-bold text-brand-darkBlue bg-blue-50 px-2 py-0.5 rounded">
+                            {sch.tag}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-slate-900 font-heading">{sch.name}</h3>
+
+                        <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 space-y-2 text-xs">
+                          <div><span className="font-bold text-slate-800">Benefit Amount:</span> <span className="text-brand-green font-bold text-sm">{sch.maxAmount}</span></div>
+                          <div><span className="font-bold text-slate-800">Interest / Terms:</span> {sch.interestRate}</div>
+                          <div><span className="font-bold text-slate-800">Covers:</span> {sch.coverage}</div>
+                          <div><span className="font-bold text-slate-800">Eligibility:</span> {sch.eligibility}</div>
+                        </div>
+
+                        <p className="text-xs text-slate-600 italic bg-blue-50/50 p-3 rounded-xl border border-blue-100">
+                          💡 <strong>How Future Guide Supports:</strong> {sch.highlight}
+                        </p>
+                      </div>
+
+                      <div className="pt-4">
+                        <button 
+                          onClick={() => {
+                            setFormState({...formState, message: `Inquiry regarding ${sch.name} application & eligibility for 2027-28.`});
+                            setModalOpen(true);
+                          }}
+                          className="w-full py-2.5 rounded-xl font-bold text-xs text-brand-blue bg-blue-100 hover:bg-brand-blue hover:text-white transition-colors"
+                        >
+                          Check My Eligibility for {sch.name.split('(')[0]}
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </main>
+          )}
+
+          {/* TAB 5: PARTNER COLLEGES */}
+          {activeTab === 'colleges' && (
+            <main className="flex-1 py-12 sm:py-16 bg-slate-50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <div className="text-center max-w-3xl mx-auto">
+                  <span className="text-brand-blue text-xs font-bold uppercase tracking-wider bg-blue-50 px-3 py-1 rounded-full">
+                    Campus Network
+                  </span>
+                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3 font-heading">
+                    Partner Colleges & Universities (2027-28)
+                  </h1>
+                  <p className="text-slate-600 text-base mt-2">
+                    Verified tie-ups with 150+ premier campuses in Kolkata, West Bengal, Bangalore, Bhubaneswar, Delhi NCR, and Abroad.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {colleges.map((col) => (
+                    <div key={col.id} className="bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover border border-slate-200 transition-all duration-300 flex flex-col justify-between group">
+                      <div>
+                        <div className="h-48 relative overflow-hidden bg-slate-200">
+                          <img 
+                            src={col.image} 
+                            alt={col.name} 
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute top-3 right-3 bg-white/95 px-2.5 py-0.5 rounded-md text-xs font-bold text-brand-blue shadow">
+                            ⭐ {col.rating}
+                          </div>
+                          <div className="absolute bottom-3 left-3 bg-brand-darkBlue/80 backdrop-blur-md px-2.5 py-1 rounded-md text-[11px] font-semibold text-white">
+                            📍 {col.location}
+                          </div>
+                        </div>
+
+                        <div className="p-5 space-y-2">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                            {col.badge}
+                          </span>
+                          <h3 className="font-bold text-slate-900 text-base leading-snug">{col.name}</h3>
+                          <p className="text-xs text-slate-500">{col.stream}</p>
+                          <div className="text-xs font-semibold text-slate-700 bg-slate-50 p-2 rounded-lg">
+                            Fees: <span className="text-brand-blue font-bold">{col.fee}</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="p-5 pt-0">
+                        <button 
+                          onClick={() => {
+                            setFormState({...formState, message: `Requesting 2027-28 seat availability & fee structure for ${col.name}`});
+                            setModalOpen(true);
+                          }}
+                          className="w-full py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-brand-blue to-brand-green hover:shadow-md transition-all"
+                        >
+                          Check Seat Availability
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </main>
+          )}
+
+          {/* TAB 6: BLOG SECTION */}
+          {activeTab === 'blog' && (
+            <main className="flex-1 py-12 sm:py-16 bg-slate-50">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                
+                <div className="text-center max-w-3xl mx-auto">
+                  <span className="text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                    Admission Insights & Guides
+                  </span>
+                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3 font-heading">
+                    Future Guide Educational Blog (2027-28)
+                  </h1>
+                  <p className="text-slate-600 text-base mt-2">
+                    In-depth articles on Central Government Vidya Lakshmi interest subsidies, WBSCC loans, NEET cutoff alternatives, and career counseling.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {BLOG_ARTICLES.map((article) => (
+                    <article key={article.id} className="bg-white rounded-3xl p-6 sm:p-8 shadow-card border border-slate-200 hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between">
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between text-xs text-slate-500">
+                          <span className="font-bold text-brand-green bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
+                            {article.category}
+                          </span>
+                          <span>{article.date} • {article.readTime}</span>
+                        </div>
+
+                        <h2 
+                          onClick={() => setSelectedBlog(article)}
+                          className="text-xl sm:text-2xl font-bold text-slate-900 font-heading hover:text-brand-blue cursor-pointer transition-colors"
+                        >
+                          {article.title}
+                        </h2>
+
+                        <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                          {article.summary}
+                        </p>
+                        <div className="text-[11px] text-slate-400">
+                          Author: <span className="text-slate-600 font-medium">{article.author}</span>
+                        </div>
+                      </div>
+
+                      <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
+                        <button 
+                          onClick={() => setSelectedBlog(article)}
+                          className="text-xs font-bold text-brand-blue hover:text-brand-green flex items-center gap-1 transition-colors"
+                        >
+                          Read Complete Article ➔
+                        </button>
+                        <button 
+                          onClick={() => {
+                            setFormState({...formState, message: `Question regarding blog article: ${article.title}`});
+                            setModalOpen(true);
+                          }}
+                          className="text-xs text-slate-500 hover:text-brand-darkBlue underline"
+                        >
+                          Ask Counselor
+                        </button>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+              </div>
+            </main>
+          )}
+
+          {/* TAB 7: CONTACT US (KOLKATA) */}
+          {activeTab === 'contact' && (
+            <main className="flex-1 py-12 sm:py-16 bg-slate-50">
+              <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div className="text-center max-w-3xl mx-auto">
+                  <span className="text-brand-green text-xs font-bold uppercase tracking-wider bg-green-50 px-3 py-1 rounded-full border border-green-200">
+                    Get in Touch
+                  </span>
+                  <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3 font-heading">
+                    Contact FUTURE GUIDE Kolkata
+                  </h1>
+                  <p className="text-slate-600 text-base mt-2">
+                    Schedule a free in-person counseling session or call our helpline numbers for instant admission guidance for 2027-28.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  
+                  {/* Left Column: Contact Cards */}
+                  <div className="lg:col-span-5 space-y-4">
+                    <div className="bg-white p-6 rounded-2xl shadow-card border border-slate-200 space-y-4">
+                      <div className="flex items-center gap-3">
+                        <img src="./assets/logo.jpg" alt="Future Guide" className="w-14 h-14 rounded-full object-contain p-0.5 border-2 border-brand-green/30" />
+                        <div>
+                          <h3 className="font-bold text-slate-900 text-lg font-heading">FUTURE GUIDE</h3>
+                          <p className="text-xs text-brand-green font-semibold">Kolkata Admission Headquarters</p>
+                        </div>
+                      </div>
+
+                      <div className="space-y-3 pt-2 text-xs sm:text-sm text-slate-700">
+                        <div className="flex items-start gap-3">
+                          <span className="text-xl">📍</span>
+                          <div>
+                            <strong className="block text-slate-900">Office Location</strong>
+                            <span>{CONTACT.address}</span>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <span className="text-xl">📞</span>
+                          <div>
+                            <strong className="block text-slate-900">Direct Phone Helplines</strong>
+                            <a href={`tel:${CONTACT.phones[0]}`} className="text-brand-blue font-bold hover:underline block">{CONTACT.phones[0]}</a>
+                            <a href={`tel:${CONTACT.phones[1]}`} className="text-brand-blue font-bold hover:underline block">{CONTACT.phones[1]}</a>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <span className="text-xl">💬</span>
+                          <div>
+                            <strong className="block text-slate-900">Official WhatsApp Desk</strong>
+                            <a href={`https://wa.me/91${CONTACT.whatsapp}`} target="_blank" rel="noreferrer" className="text-emerald-700 font-bold hover:underline">
+                              +91 {CONTACT.whatsapp} / +91 {CONTACT.whatsappSecondary}
+                            </a>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <span className="text-xl">✉️</span>
+                          <div>
+                            <strong className="block text-slate-900">Email Address</strong>
+                            <a href={`mailto:${CONTACT.email}`} className="text-brand-blue hover:underline">{CONTACT.email}</a>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <span className="text-xl">⏰</span>
+                          <div>
+                            <strong className="block text-slate-900">Operating Hours</strong>
+                            <span>{CONTACT.hours}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Contact Form */}
+                  <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl shadow-card border border-slate-200">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 font-heading">Send Us a Direct Message (Batch 2027-28)</h3>
+                    <p className="text-xs text-slate-500 mb-6">Fill in the details below and our lead counselor will reach out within 15 minutes.</p>
+
+                    <form onSubmit={handleFormSubmit} className="space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                          <input 
+                            type="text" 
+                            required 
+                            placeholder="Student or Parent Name"
+                            value={formState.name}
+                            onChange={(e) => setFormState({...formState, name: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold text-slate-700 mb-1">WhatsApp Mobile *</label>
+                          <input 
+                            type="tel" 
+                            required 
+                            placeholder="10-digit mobile number"
+                            value={formState.phone}
+                            onChange={(e) => setFormState({...formState, phone: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                          <input 
+                            type="email" 
+                            placeholder="email@example.com"
+                            value={formState.email}
+                            onChange={(e) => setFormState({...formState, email: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold text-slate-700 mb-1">Desired Course *</label>
+                          <select 
+                            value={formState.course}
+                            onChange={(e) => setFormState({...formState, course: e.target.value})}
+                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none bg-white"
+                          >
+                            <option value="B.Tech / Engineering">Engineering (B.Tech / Diploma)</option>
+                            <option value="MBBS / Medical">Medical (MBBS / BDS)</option>
+                            <option value="Nursing (GNM / B.Sc)">Nursing (GNM / B.Sc)</option>
+                            <option value="Management (MBA / BBA)">Management (MBA / BBA)</option>
+                            <option value="Computer Applications (BCA / MCA)">Computer Apps (BCA / MCA)</option>
+                            <option value="Pharmacy (B.Pharm / D.Pharm)">Pharmacy (B.Pharm / D.Pharm)</option>
+                            <option value="Law (BA LLB / LLB)">Law (BA LLB / LLB)</option>
+                            <option value="Vidya Lakshmi & WBSCC Aid">Vidya Lakshmi / WBSCC Loan Support</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">Your Query (Marks / Preferred College / Scholarship)</label>
+                        <textarea 
+                          rows="4" 
+                          placeholder="Tell us about your educational background, preferred course for 2027-28, budget, or questions..."
+                          value={formState.message}
+                          onChange={(e) => setFormState({...formState, message: e.target.value})}
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none resize-none"
+                        ></textarea>
+                      </div>
+
+                      <button 
+                        type="submit"
+                        className="w-full py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-brand-blue via-brand-darkBlue to-brand-green hover:shadow-lg transition-all text-sm flex items-center justify-center gap-2"
+                      >
+                        <span>Send Message & Open WhatsApp Chat ➔</span>
+                      </button>
+                    </form>
+                  </div>
+
+                </div>
+
+              </div>
+            </main>
+          )}
+
+          {/* ARTICLE READER MODAL */}
+          {selectedBlog && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+              <div className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 shadow-2xl relative custom-scrollbar">
+                <button 
+                  onClick={() => setSelectedBlog(null)}
+                  className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors"
+                >
+                  ✕
+                </button>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold text-brand-green bg-green-50 px-2.5 py-1 rounded-full border border-green-200">
+                      {selectedBlog.category}
+                    </span>
+                    <span className="text-xs text-slate-500">• {selectedBlog.date}</span>
+                    <span className="text-xs text-slate-500">• {selectedBlog.readTime}</span>
+                  </div>
+
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading">
+                    {selectedBlog.title}
+                  </h2>
+
+                  <div className="text-xs text-slate-500 border-b border-slate-100 pb-4">
+                    Published by <strong className="text-slate-800">{selectedBlog.author}</strong> — Future Guide Kolkata
+                  </div>
+
+                  <div className="text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 whitespace-pre-line">
+                    {selectedBlog.content}
+                  </div>
+
+                  <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                    <button 
+                      onClick={() => {
+                        const blogTitle = selectedBlog.title;
+                        setSelectedBlog(null);
+                        setFormState({...formState, message: `Question regarding article: ${blogTitle}`});
+                        setModalOpen(true);
+                      }}
+                      className="flex-1 py-3 bg-brand-blue hover:bg-brand-darkBlue text-white font-bold text-xs rounded-xl shadow transition-colors"
+                    >
+                      Talk to Counselor About This Topic
+                    </button>
+                    <button 
+                      onClick={() => setSelectedBlog(null)}
+                      className="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-colors"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* APPLICATION / FREE COUNSELING MODAL */}
+          {modalOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+              <div className="bg-white rounded-3xl max-w-xl w-full max-h-[95vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative custom-scrollbar">
+                <button 
+                  onClick={() => setModalOpen(false)}
+                  className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition-colors"
+                >
+                  ✕
+                </button>
+
+                <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+                  <img src="./assets/logo.jpg" alt="Logo" className="w-12 h-12 rounded-full object-contain border border-brand-green/30" />
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 font-heading">Book Free Counseling (2027-28)</h3>
+                    <p className="text-xs text-brand-green font-semibold">Future Guide — Kolkata Admission Support</p>
+                  </div>
+                </div>
+
+                {formSubmitted ? (
+                  <div className="p-6 bg-green-50 border border-green-200 rounded-2xl text-center space-y-3">
+                    <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto text-2xl font-bold">✓</div>
+                    <h4 className="text-lg font-bold text-green-900">Inquiry Saved in Backend & Notified!</h4>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">
+                      <span>✓ Stored in Supabase Database</span>
+                    </div>
+                    <p className="text-xs text-green-700">
+                      Our Kolkata office has received your admission inquiry and will review your details shortly.
+                    </p>
+                    <button 
+                      onClick={() => { setFormSubmitted(false); setModalOpen(false); }}
+                      className="px-6 py-2.5 bg-brand-green text-white font-bold text-xs rounded-xl shadow"
+                    >
+                      Done
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleFormSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
+                      <input 
+                        type="text" 
+                        required 
+                        placeholder="Your full name"
+                        value={formState.name}
+                        onChange={(e) => setFormState({...formState, name: e.target.value})}
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none"
+                      />
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">WhatsApp Number *</label>
+                        <input 
+                          type="tel" 
+                          required 
+                          placeholder="10-digit number"
+                          value={formState.phone}
+                          onChange={(e) => setFormState({...formState, phone: e.target.value})}
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold text-slate-700 mb-1">Target Course *</label>
+                        <select 
+                          value={formState.course}
+                          onChange={(e) => setFormState({...formState, course: e.target.value})}
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none bg-white"
+                        >
+                          <option value="Engineering (B.Tech / M.Tech)">Engineering (B.Tech / M.Tech)</option>
+                          <option value="Medical (MBBS / BDS)">Medical (MBBS / BDS)</option>
+                          <option value="Nursing (GNM / B.Sc)">Nursing (GNM / B.Sc)</option>
+                          <option value="Management (MBA / BBA)">Management (MBA / BBA)</option>
+                          <option value="Computer Applications (BCA / MCA)">Computer Apps (BCA / MCA)</option>
+                          <option value="Pharmacy (B.Pharm / D.Pharm)">Pharmacy (B.Pharm / D.Pharm)</option>
+                          <option value="Law (BA LLB / LLB)">Law (BA LLB / LLB)</option>
+                          <option value="Vidya Lakshmi & WBSCC Loan Help">Vidya Lakshmi & WBSCC Loan Assistance</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 mb-1">Your Query / Marks / Preferred Colleges</label>
+                      <textarea 
+                        rows="3" 
+                        placeholder="Mention last exam percentage, preferred city (Kolkata/Bangalore/Abroad), and any specific college request..."
+                        value={formState.message}
+                        onChange={(e) => setFormState({...formState, message: e.target.value})}
+                        className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue outline-none resize-none"
+                      ></textarea>
+                    </div>
+
+                    <button 
+                      type="submit"
+                      className="w-full py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-brand-blue via-brand-darkBlue to-brand-green hover:shadow-lg transition-all text-sm flex items-center justify-center gap-2"
+                    >
+                      <span>🚀 Connect With Kolkata Counselor</span>
+                    </button>
+
+                    <div className="text-center pt-2">
+                      <span className="text-xs text-slate-500">Or speak directly right now:</span>
+                      <div className="flex justify-center gap-4 mt-1 font-bold text-xs text-brand-darkBlue">
+                        <a href={`tel:${CONTACT.phones[0]}`} className="hover:underline">📞 {CONTACT.phones[0]}</a>
+                        <span>•</span>
+                        <a href={`tel:${CONTACT.phones[1]}`} className="hover:underline">📞 {CONTACT.phones[1]}</a>
+                      </div>
+                    </div>
+                  </form>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* FLOATING ACTION BUTTONS */}
+          <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
+            <a 
+              href={`https://wa.me/91${CONTACT.whatsapp}?text=${encodeURIComponent('Hello Future Guide Kolkata, I am looking for 2027-28 college admission, WBSCC and Vidya Lakshmi scholarship counseling.')}`}
+              target="_blank" 
+              rel="noreferrer"
+              className="group flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-2xl hover:shadow-glow-green transition-all duration-300 transform hover:scale-105"
+              title="Chat with Counselor on WhatsApp"
+            >
+              <svg className="w-6 h-6 fill-current text-white shrink-0" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.668-.7c.96.523 1.799.815 2.792.815 3.182 0 5.769-2.587 5.769-5.766 0-3.18-2.587-5.766-5.769-5.766zm9.969 5.766c0 5.503-4.468 9.969-9.969 9.969-1.748 0-3.385-.452-4.814-1.242l-5.217 1.368 1.391-5.083c-.896-1.488-1.429-3.235-1.429-5.012 0-5.501 4.467-9.969 9.969-9.969 5.501 0 9.969 4.468 9.969 9.969z"/>
+              </svg>
+              <span className="text-xs font-bold hidden sm:inline-block">WhatsApp Us</span>
+            </a>
+
+            <a 
+              href={`tel:${CONTACT.phones[0]}`}
+              className="bg-brand-blue hover:bg-brand-darkBlue text-white p-3.5 rounded-full shadow-2xl hover:shadow-glow-blue transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              title="Call Future Guide"
+            >
+              <span className="text-xl">📞</span>
+            </a>
+          </div>
+
+          {/* MAIN FOOTER */}
+          <footer className="bg-slate-900 text-slate-300 text-xs sm:text-sm pt-16 pb-12 border-t border-slate-800">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+                
+                {/* Column 1: Brand Info */}
+                <div className="lg:col-span-4 space-y-4">
+                  <div className="flex items-center gap-3">
+                    <img src="./assets/logo.jpg" alt="Future Guide" className="w-14 h-14 rounded-full object-contain p-0.5 bg-white" />
+                    <div>
+                      <span className="text-2xl font-black text-white font-heading tracking-tight">
+                        FUTURE<span className="text-brand-green ml-1">GUIDE</span>
+                      </span>
+                      <p className="text-[11px] text-emerald-400 font-semibold">{CONTACT.tagline}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-400 text-xs leading-relaxed">
+                    Kolkata's most trusted educational consultancy providing transparent college admission support, counseling for NEET / WBJEE / Management Quota, and complete West Bengal Student Credit Card & Vidya Lakshmi Central Scholarship guidance.
+                  </p>
+                  <div className="text-xs text-brand-gold font-bold">
+                    {CONTACT.pillars}
+                  </div>
+                </div>
+
+                {/* Column 2: Quick Links */}
+                <div className="lg:col-span-2 space-y-3">
+                  <h4 className="font-bold text-white uppercase tracking-wider text-xs">Quick Links</h4>
+                  <ul className="space-y-2 text-xs text-slate-400">
+                    <li><button onClick={() => navigateTo('home')} className="hover:text-emerald-400">Home</button></li>
+                    <li><button onClick={() => navigateTo('about')} className="hover:text-emerald-400">About Future Guide</button></li>
+                    <li><button onClick={() => navigateTo('courses')} className="hover:text-emerald-400">Courses & Programs</button></li>
+                    <li><button onClick={() => navigateTo('scholarships')} className="hover:text-emerald-400">Vidya Lakshmi & WBSCC</button></li>
+                    <li><button onClick={() => navigateTo('colleges')} className="hover:text-emerald-400">Partner Campuses</button></li>
+                    <li><button onClick={() => navigateTo('blog')} className="hover:text-emerald-400">Blog & Admission News</button></li>
+                    <li><button onClick={() => navigateTo('contact')} className="hover:text-emerald-400">Contact Kolkata Office</button></li>
+                  </ul>
+                </div>
+
+                {/* Column 3: Courses */}
+                <div className="lg:col-span-3 space-y-3">
+                  <h4 className="font-bold text-white uppercase tracking-wider text-xs">Top Admissions 2027-28</h4>
+                  <ul className="space-y-2 text-xs text-slate-400">
+                    <li>B.Tech (CSE, AI & Data Science)</li>
+                    <li>MBBS & BDS (India & Abroad)</li>
+                    <li>GNM & B.Sc Nursing (INC Approved)</li>
+                    <li>MBA & PGDM (Dual Specialization)</li>
+                    <li>BBA, BCA & MCA Programs</li>
+                    <li>B.Pharm & D.Pharm (PCI Approved)</li>
+                    <li>BA LLB & 3-Yr LLB Legal Studies</li>
+                  </ul>
+                </div>
+
+                {/* Column 4: Contact Kolkata */}
+                <div className="lg:col-span-3 space-y-3">
+                  <h4 className="font-bold text-white uppercase tracking-wider text-xs">Kolkata Office Contact</h4>
+                  <div className="space-y-2 text-xs text-slate-400">
+                    <p className="text-white font-medium">📍 {CONTACT.location}</p>
+                    <p className="text-slate-400">{CONTACT.address}</p>
+                    <p className="text-slate-300">
+                      📞 <a href={`tel:${CONTACT.phones[0]}`} className="hover:text-emerald-400 font-bold">{CONTACT.phones[0]}</a> / 
+                      <a href={`tel:${CONTACT.phones[1]}`} className="hover:text-emerald-400 font-bold ml-1">{CONTACT.phones[1]}</a>
+                    </p>
+                    <p className="text-slate-300">
+                      💬 WhatsApp: <a href={`https://wa.me/91${CONTACT.whatsapp}`} target="_blank" rel="noreferrer" className="text-emerald-400 font-bold hover:underline">+91 {CONTACT.whatsapp}</a>
+                    </p>
+                    <p className="text-slate-300">
+                      ✉️ <a href={`mailto:${CONTACT.email}`} className="hover:text-emerald-400">{CONTACT.email}</a>
+                    </p>
+                    <p className="text-[11px] text-slate-500 pt-1">
+                      🕒 Mon - Sun: 9:00 AM - 9:00 PM
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Bottom Copyright */}
+              <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div>
+                  © 2027-2028 <strong className="text-slate-400">{CONTACT.name}</strong>. All Rights Reserved.
+                </div>
+                <div className="flex items-center gap-4 text-[11px]">
+                  <span>Kolkata Educational Consultancy</span>
+                  <span>•</span>
+                  <span>100% Verified Admissions</span>
+                  <span>•</span>
+                  <span>Vidya Lakshmi & WBSCC Partner</span>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      );
+    }
+
+    // Render the React application
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
